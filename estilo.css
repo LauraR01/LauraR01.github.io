@@ -227,92 +227,39 @@ html{
     padding: 20px 0;
 }
 
-/* Estilo para las dos columnas */
+/* Contenedor para dividir en columnas */
 .contenedor-skills-columnas {
     display: flex;
-    justify-content: space-around; /* Espacio entre columnas */
-    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
-    margin-top: 20px;
 }
 
 .columna-skills {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-template-rows: repeat(2, 1fr); /* Dos filas */
+    grid-template-rows: repeat(2, 1fr);    /* Dos filas */
     gap: 20px;
-    flex: 1;
+    width: 45%; /* Ajustar ancho de cada columna */
 }
 
 .columna-skills h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    grid-column: span 3; /* El título ocupa todo el ancho */
     text-align: center;
-    color: #fff;
+    grid-column: span 3; /* El título abarca las tres columnas */
 }
 
 .skill-cuadro {
-    width: 100px;
-    height: 100px;
     background-color: #2a2f32;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
     transition: background-color 0.3s;
-}
-
-.skill-cuadro:hover {
-    background-color: #1cb698;
-}
-
-.skill-cuadro i {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.skill-cuadro span {
-    font-weight: bold;
-    font-size: 14px;
-    color: #fff;
-}
-
-/* Estilo para las dos columnas */
-.contenedor-skills-columnas {
-    display: flex;
-    justify-content: space-around; /* Espacio entre columnas */
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.columna-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
-
-.columna-skills h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.skill-cuadro {
-    width: 100px;
-    height: 100px;
-    background-color: #2a2f32;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
+    height: 120px;
+    width: 100%;
 }
 
 .skill-cuadro:hover {
