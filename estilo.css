@@ -208,6 +208,7 @@ html{
 .sobremi button:hover .overlay{
     width: 100%;
 }
+
 /* SECCION S K I L L S */
 .skills {
     background-color: #1e2326;
@@ -230,16 +231,17 @@ html{
 /* Contenedor para dividir en columnas */
 .contenedor-skills-columnas {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between; /* Asegura que las columnas estén separadas */
+    flex-wrap: wrap; /* Permitir que las columnas se envuelvan si es necesario */
+    gap: 20px; /* Espacio entre las columnas */
 }
 
 .columna-skills {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas */
     grid-template-rows: repeat(2, 1fr);    /* Dos filas */
-    gap: 20px;
-    width: 45%; /* Ajustar ancho de cada columna */
+    gap: 20px; /* Espacio entre las habilidades dentro de cada columna */
+    width: 45%; /* Cada columna ocupará el 45% del ancho disponible */
 }
 
 .columna-skills h3 {
