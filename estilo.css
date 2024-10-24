@@ -209,149 +209,52 @@ html{
     width: 100%;
 }
 /* SECCION S K I L L S */
-.skills {
-    background-color: #1e2326; /* Cambiar fondo a igual que Sobre mí */
+.skills{
+    background-color: #1e2326; /* Igual que Sobre mÃ­ */
     color: #fff;
     padding: 50px 20px;
 }
-
-.skills .contenido-seccion {
+.skills .contenido-seccion{
     max-width: 1100px;
     margin: auto;
 }
-
-.skills h2 {
+.skills h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-
-.skills .fila {
+.skills .contenedor-skills{
     display: flex;
-    flex-wrap: wrap; /* Para que se vean en columnas */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skills .fila .col {
+/* Cada cuadro de habilidad */
+.skills .skill-cuadro {
     width: 100px;
     height: 100px;
     background-color: #252A2E;
     border-radius: 10px;
-    margin: 0 15px 15px 0;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: .3s;
 }
-
-.skills .fila .col:hover {
-    background-color: #1CB698; /* Cambio de color al pasar el mouse */
+.skills .skill-cuadro:hover {
+    background-color: #1CB698;
 }
-
-.skills .fila .col i {
+.skills .skill-cuadro i {
     font-size: 30px;
     margin-bottom: 10px;
+    color: #fff;
 }
-
-.skills .fila .col span {
+.skills .skill-cuadro span {
     font-weight: bold;
     font-size: 14px;
-}
-
-/* Animaciones para las barras de habilidades */
-.skills .skill .barra-skill {
-    display: none; /* Ocultar las barras ya que ahora es más visual el enfoque */
-}
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .photoshop{
-    width: 0%;
-    animation: 2s photoshop forwards;
-}
-@keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 95%;}
-}
-
-.skills .skill .wordpress{
-    width: 0%;
-    animation: 2s wordpress forwards;
-}
-@keyframes wordpress {
-    0%{width: 0%;}
-    100%{width: 81%;}
-}
-
-.skills .skill .drupal{
-    width: 0%;
-    animation: 2s drupal forwards;
-}
-@keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 55%;}
-}
-
-.skills .skill .comunicacion{
-    width: 0%;
-    animation: 2s comunicacion forwards;
-}
-@keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-.skills .skill .trabajo{
-    width: 0%;
-    animation: 2s trabajo forwards;
-}
-@keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
-}
-
-.skills .skill .dedicacion{
-    width: 0%;
-    animation: 2s dedicacion forwards;
-}
-@keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
+    color: #fff;
 }
 /* SECCION CURRICULUM */
 .curriculum{
