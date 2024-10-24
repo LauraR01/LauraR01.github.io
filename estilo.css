@@ -209,64 +209,59 @@ html{
     width: 100%;
 }
 /* SECCION S K I L L S */
-.skills{
-    background-color: #252A2E;
+.skills {
+    background-color: #1e2326; /* Cambiar fondo a igual que Sobre mí */
     color: #fff;
     padding: 50px 20px;
 }
-.skills .contenido-seccion{
+
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+}
 
-}
-.skills .fila{
+.skills .fila {
     display: flex;
+    flex-wrap: wrap; /* Para que se vean en columnas */
 }
-.skills .fila .col{
-    width: 50%;
-    padding: 0 20px;
+
+.skills .fila .col {
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
 }
-.skills .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
+
+.skills .fila .col:hover {
+    background-color: #1CB698; /* Cambio de color al pasar el mouse */
 }
-.skills .skill > span{
-    font-weight: bold;
-    display: block;
+
+.skills .fila .col i {
+    font-size: 30px;
     margin-bottom: 10px;
 }
-.skills .skill .barra-skill{
-    height: 8px;
-    width: 80%;
-    background-color: #131517;
-    position: relative;
-    margin-bottom: 30px;
-}
-.skills .skill .progreso{
-    background-color: #1CB698;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
-}
-.skills .skill .barra-skill span{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background-color: #1CB698;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    top: -17px;
-    right: -15px;
+
+.skills .fila .col span {
+    font-weight: bold;
     font-size: 14px;
+}
+
+/* Animaciones para las barras de habilidades */
+.skills .skill .barra-skill {
+    display: none; /* Ocultar las barras ya que ahora es más visual el enfoque */
 }
 /* Estas clases se agregaran dinamicamente mediante javascript */
 .skills .skill .javascript{
