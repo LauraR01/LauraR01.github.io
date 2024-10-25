@@ -38,10 +38,7 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
-document.querySelectorAll('.toggle-skills').forEach(function(skillTitle) {
-    skillTitle.addEventListener('click', function() {
-        const target = document.getElementById(skillTitle.getAttribute('data-target'));
-        // Alternar la clase 'active' para mostrar u ocultar la lista de habilidades
-        target.classList.toggle('active');
-    });
+document.getElementById('toggle-skills').addEventListener('click', function() {
+    // Alternar la clase 'active' en el contenido de skills
+    document.getElementById('skills-content').classList.toggle('active');
 });

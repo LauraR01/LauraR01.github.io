@@ -296,27 +296,28 @@ html{
     font-size: 14px;
     color: #fff;
 }
-/* Ocultar la lista de habilidades inicialmente */
-.skill-list {
+/* Ocultar el contenido de skills inicialmente */
+#skills-content {
     display: none;
 }
 
-/* Mostrar la lista cuando se agregue la clase 'active' */
-.skill-list.active {
+/* Añadir una clase para mostrar el contenido */
+#skills-content.active {
     display: block;
 }
 
-/* Para el título de skills, hacerlo interactivo */
-.toggle-skills {
+/* Para hacer que el título de Skills sea interactivo */
+#toggle-skills {
     cursor: pointer;
     color: #C439D1;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.toggle-skills:hover {
+#toggle-skills:hover {
     color: #C439D1;
 }
+
 
 /* SECCION PORTFOLIO */
 .portfolio{
