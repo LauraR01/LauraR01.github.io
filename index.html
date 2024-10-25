@@ -49,57 +49,6 @@
         </div>
     </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
-            <div class="galeria">
-                <div class="proyecto">
-                    <img src="img/p1.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/p2.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/p3.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/p4.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/p5.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/p6.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SECCION SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
@@ -182,62 +131,118 @@
 <section class="skills" id="skills">
     <div class="contenido-seccion">
         <h2>Skills</h2>
-        <div class="contenedor-skills-columnas">
-            <!-- Technical Skills -->
-            <div class="columna-skills">
-                <h3>Technical Skills</h3>
-                <div class="skill-cuadro">
-                    <i class="fa-brands fa-unity"></i>
-                    <span>Unity</span>
+        <button class="skills-toggle">Mostrar Skills</button> <!-- Botón para desplegar -->
+        
+        <div class="skills-content" style="display: none;"> <!-- Contenido oculto al inicio -->
+            <div class="contenedor-skills-columnas">
+                <!-- Technical Skills -->
+                <div class="columna-skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-cuadro">
+                        <i class="fa-brands fa-unity"></i>
+                        <span>Unity</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <span class="iconify" data-icon="hugeicons:computer-programming-02" data-inline="false" style="width: 40px; height: 40px;"></span>
+                        <span>C#</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <span class="iconify" data-icon="simple-icons:blender" data-inline="false" style="width: 40px; height: 40px;"></span>
+                        <span>Blender</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <span class="iconify" data-icon="simple-icons:autocad" data-inline="false" style="width: 40px; height: 40px;"></span>
+                        <span>Autocad</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-file-code"></i>
+                        <span>HTML y CSS</span>
+                    </div>
                 </div>
-                <div class="skill-cuadro">
-                    <span class="iconify" data-icon="hugeicons:computer-programming-02" data-inline="false" style="width: 40px; height: 40px;"></span>
-                    <span>C#</span>
-                </div>
-                <div class="skill-cuadro">
-                    <i class="fa-brands fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="skill-cuadro">
-                    <span class="iconify" data-icon="simple-icons:blender" data-inline="false" style="width: 40px; height: 40px;"></span>
-                    <span>Blender</span>
-                </div>
-                <div class="skill-cuadro">
-                    <span class="iconify" data-icon="simple-icons:autocad" data-inline="false" style="width: 40px; height: 40px;"></span>
-                    <span>Autocad</span>
-                </div>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-file-code"></i>
-                    <span>HTML y CSS</span>
+                
+                <!-- Professional Skills -->
+                <div class="columna-skills">
+                    <h3>Professional Skills</h3>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Comunicación</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Trabajo en Equipo</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Creatividad</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Dedicación</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Proyect Management</span>
+                    </div>
+                    <div class="skill-cuadro">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Liderazgo</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Professional Skills -->
-            <div class="columna-skills">
-                <h3>Professional Skills</h3>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-comments"></i>
-                    <span>Comunicación</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="img/p1.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Creativo</h3>
+                    <p>Fotografía</p>
                 </div>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-users"></i>
-                    <span>Trabajo en Equipo</span>
+            </div>
+            <div class="proyecto">
+                <img src="img/p2.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Creativo</h3>
+                    <p>Fotografía</p>
                 </div>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <span>Creatividad</span>
+            </div>
+            <div class="proyecto">
+                <img src="img/p3.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Creativo</h3>
+                    <p>Fotografía</p>
                 </div>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Dedicación</span>
+            </div>
+            <div class="proyecto">
+                <img src="img/p4.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Creativo</h3>
+                    <p>Fotografía</p>
                 </div>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <span>Proyect Management</span>
+            </div>
+            <div class="proyecto">
+                <img src="img/p5.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Creativo</h3>
+                    <p>Fotografía</p>
                 </div>
-                <div class="skill-cuadro">
-                    <i class="fa-solid fa-handshake"></i>
-                    <span>Liderazgo</span>
+            </div>
+            <div class="proyecto">
+                <img src="img/p6.jpg" alt="">
+                <div class="overlay">
+                    <h3>Diseño Creativo</h3>
+                    <p>Fotografía</p>
                 </div>
             </div>
         </div>
@@ -315,45 +320,30 @@
     </section>
 
     <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <div class="fila">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
-                <!-- Mapa -->
-                <div class="col">
-                    <img src="img/ubicacion.png" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                Nicaragua 159, San Rafael Mza
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                Llamanos: 2384 - 4343443 
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                Email: cw@example.com
-                            </li>
-                        </ul>
-                    </div>
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <div class="fila">
+            <!-- Formulario de Google -->
+            <div class="col">
+                <!-- Código de inserción de Google Forms -->
+                <iframe src="https://forms.gle/AxeWMxPPZ5Abfi2y8" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            </div>
+
+            <!-- Mapa o cualquier otro contenido -->
+            <div class="col">
+                <img src="img/ubicacion.png" alt="">
+                <div class="info">
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> Nicaragua 159, San Rafael Mza</li>
+                        <li><i class="fa-solid fa-mobile-screen"></i> Llamanos: 2384 - 4343443</li>
+                        <li><i class="fa-solid fa-envelope"></i> Email: cw@example.com</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- footer -->
     <footer>
