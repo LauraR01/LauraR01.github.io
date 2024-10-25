@@ -34,8 +34,14 @@ function efectoHabilidades(){
     }
 }
 
-
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
     efectoHabilidades();
 } 
+document.querySelectorAll('.toggle-skills').forEach(function(skillTitle) {
+    skillTitle.addEventListener('click', function() {
+        const target = document.getElementById(skillTitle.getAttribute('data-target'));
+        // Alternar la clase 'active' para mostrar u ocultar la lista de habilidades
+        target.classList.toggle('active');
+    });
+});
