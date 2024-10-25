@@ -303,21 +303,21 @@ html{
 
 /* Añadir una clase para mostrar el contenido */
 #skills-content.active {
-    display: block;
+    display: flex;
 }
 
-/* Para hacer que el título de Skills sea interactivo */
+/* Estilo interactivo para el título "Skills" */
 #toggle-skills {
     cursor: pointer;
     color: #C439D1;
     font-weight: bold;
     transition: color 0.3s;
+    text-align: center;
 }
 
 #toggle-skills:hover {
     color: #C439D1;
 }
-
 
 /* SECCION PORTFOLIO */
 .portfolio{

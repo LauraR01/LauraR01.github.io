@@ -39,6 +39,6 @@ window.onscroll = function(){
     efectoHabilidades();
 } 
 document.getElementById('toggle-skills').addEventListener('click', function() {
-    // Alternar la clase 'active' en el contenido de skills
+    // Alterna la clase 'active' en el contenido de skills
     document.getElementById('skills-content').classList.toggle('active');
 });
