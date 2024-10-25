@@ -59,7 +59,7 @@ html{
 /* SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg);
+    url(images/background.webp);
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -91,17 +91,23 @@ html{
     font-size: 15px;
     font-weight: normal;
 }
+.inicio .contenido-banner .redes {
+    display: flex; /* Aplicar flexbox al contenedor */
+    justify-content: center; /* Centrar horizontalmente los iconos */
+    gap: 10px; /* Espaciado entre los iconos */
+    margin-top: 20px; /* Añadir espacio entre el texto de arriba y los iconos */
+}
 .inicio .contenido-banner .redes a{
     color: #fff;
-    display: inline-block;
+    display: flex;  /* Usar flexbox para los enlaces */
+    justify-content: center;  /* Centrar los iconos horizontalmente */
+    align-items: center;  /* Centrar los iconos verticalmente */
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
     transition: .3s;
 }
 .inicio .contenido-banner .redes a:hover{
@@ -309,7 +315,7 @@ html{
 /* Estilo interactivo para el título "Skills" */
 #toggle-skills {
     cursor: pointer;
-    color: #C439D1;
+    color: #fff;
     font-weight: bold;
     transition: color 0.3s;
     text-align: center;
@@ -377,7 +383,7 @@ html{
     margin-bottom: 0px;
 }
 
-/* SECCION CURRICULUM */
+/* 
 .curriculum{
     background-color: #1e2326;
     color: #fff;
@@ -483,6 +489,7 @@ html{
     position: relative;
     bottom: 4px;
 }
+    SECCION CURRICULUM */
 
 /* SECCION CONTACTO */
 .contacto{
@@ -501,13 +508,23 @@ html{
     text-align: center;
     padding: 20px 0;
 }
-.contacto .fila{
+.contacto .fila {
     display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Alinear verticalmente si es necesario */
+    flex-wrap: wrap; /* Para que los elementos no se desborden en pantallas pequeñas */
 }
-.contacto .col{
-    width: 50%;
-    padding: 10px;
-    position: relative;
+.contacto .col {
+    width: 100%; /* Ajustamos al 100% para asegurarnos de que se centra */
+    max-width: 640px; /* Añadimos un máximo ancho para el iframe */
+    padding: 20px;
+    text-align: center;
+}
+.contacto .col iframe {
+    width: 100%; /* El iframe ocupará el 100% del contenedor */
+    height: 800px; /* Ajustamos la altura según tus necesidades */
+    margin: 0 auto; /* Centramos el iframe */
+    border: none;
 }
 .contacto .col input, .contacto .col textarea{
     display: block;
@@ -547,26 +564,6 @@ html{
 }
 .contacto .col img{
     width: 100%;
-}
-.contacto .col .info{
-    position: absolute;
-    top: 40%;
-    background-color: #252A2E;
-    padding: 20px;
-    max-swidth: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.contacto .col .info ul{
-    list-style: none;
-}
-.contacto .col .info ul li{
-    margin-bottom: 20px;
-}
-.contacto .col .info ul li i{
-    color: #C439D1;
-    display: inline-block;
-    margin-right: 20px;
 }
 footer{
     background-color: #252A2E;
