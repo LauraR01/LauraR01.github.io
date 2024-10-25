@@ -59,8 +59,10 @@ html{
 /* SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(images/background.webp);
+    url(images/backgroundDef.webp);
     background-size: cover;
+    background-position: center;  /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat;  /* Asegura que la imagen no se repita */
     height: 100vh;
     color: #fff;
     display: flex;
@@ -133,6 +135,7 @@ html{
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
+    text-align: justify; 
 }
 .sobremi .contenido-seccion p span{
     color: #C439D1;
@@ -311,14 +314,28 @@ html{
 #skills-content.active {
     display: flex;
 }
-
+.titulo-contenedor {
+    text-align: center;
+    margin: 0 auto;
+}
 /* Estilo interactivo para el título "Skills" */
 #toggle-skills {
+    font-size: 48px; /* Ajusta el tamaño según lo necesites */
+    font-family: 'Righteous';
+    color: #fff; /* Color del texto */
+    border-bottom: 3px solid #C439D1; /* Color y grosor del subrayado */
+    padding-bottom: 10px; /* Espacio entre el texto y el subrayado */
+    display: inline-block;
+    margin: 0 auto;
     cursor: pointer;
-    color: #fff;
     font-weight: bold;
     transition: color 0.3s;
-    text-align: center;
+}
+.icono-bajo-titulo {
+    display: block;
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    color: #C439D1; /* Color del icono */
+    margin: 10px auto 0; /* Espacio entre el título y el icono */
 }
 
 #toggle-skills:hover {
@@ -326,170 +343,116 @@ html{
 }
 
 /* SECCION PORTFOLIO */
-.portfolio{
+.portfolio {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.portfolio .contenido-seccion{
+
+.portfolio .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.portfolio h2{
+
+.portfolio h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-.portfolio .galeria{
+
+.portfolio .galeria {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Centra los elementos en la fila */
 }
-.portfolio .galeria .proyecto{
+
+.portfolio .galeria .proyecto {
     position: relative;
     max-width: 340px;
-    height: fit-content;
+    height: 550px; /* Establece una altura fija para todos los proyectos */
     margin: 10px;
     cursor: pointer;
+    overflow: hidden; /* Evita que la superposición se desborde */
+    display: flex; /* Agregar flex para alinear elementos en el centro */
+    flex-direction: column; /* Asegura que los hijos se coloquen en columna */
 }
-.portfolio .galeria .proyecto img{
+
+.portfolio .galeria .proyecto img {
     width: 100%;
+    height: 550px; /* Establece una altura fija para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan sus proporciones sin deformarse */
     display: block;
 }
-.portfolio .galeria .proyecto .overlay{
+
+.portfolio .galeria .proyecto .overlay {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(196, 57, 209, 1), rgba(196, 57, 209, 1));
+    background: linear-gradient(rgba(196, 57, 209, 1), rgb(184, 150, 239));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 1s;
+    transition: opacity 0.3s ease; /* Transición suave */
     font-size: 18px;
-    letter-spacing: 3px;
-    opacity: 0;
-}
-.portfolio .galeria .proyecto .overlay h3{
-    margin-bottom: 20px;
-    transition: 1s;
-}
-.portfolio .galeria .proyecto .overlay:hover{
-    opacity: 1;
-}
-.portfolio .galeria .proyecto .overlay:hover h3{
-    margin-bottom: 0px;
+    letter-spacing: 1px; /* Ajusta el espaciado de letras si es necesario */
+    opacity: 0; /* Inicialmente oculto */
+    color: #fff; /* Cambiar color del texto dentro de la capa overlay */
+    z-index: 10; /* Asegura que la superposición esté por encima de otros elementos */
 }
 
-/* 
-.curriculum{
-    background-color: #1e2326;
-    color: #fff;
-    padding: 50px 20px;
+.portfolio .galeria .proyecto:hover .overlay {
+    opacity: 1; /* Mostrar la superposición al pasar el ratón */
 }
-.curriculum .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.curriculum h2{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
 
+.portfolio .galeria .proyecto .overlay h3 {
+    margin: 0; /* Eliminar el margen inferior para evitar el espacio extra */
+    padding-bottom: 10px; /* Espacio entre el título y el resto del texto */
+    color: #06171e; /* Cambiar color del título del proyecto */
 }
-.curriculum .fila{
-    display: flex;
-    justify-content: space-between;
+
+.portfolio .galeria .proyecto .overlay p {
+    color: #242938; /* Cambiar color del párrafo */
 }
-.curriculum .fila .col{
-    width: 49%;
-    padding: 0 20px;
+
+/* etiquetas / tags para los proyectos */
+.tags {
+    margin-top: 10px; /* Espaciado entre la descripción y las etiquetas */
+    display: flex; /* Para alinearlas en fila */
+    justify-content: center; /* Centrar etiquetas horizontalmente */
 }
-.curriculum .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
+
+.tag {
+    display: inline-block; /* Permite que las etiquetas estén en la misma línea */
+    padding: 4px 8px; /* Espaciado interno reducido */
+    margin: 3px; /* Espaciado entre las etiquetas */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    font-size: 12px; /* Tamaño de fuente reducido */
 }
-.curriculum .fila .izquierda{
-    border-right: 2px solid #252A2E;
+
+.tag-rojo {
+    background-color: #ad3128; /* Color de fondo rojo */
 }
-.curriculum .fila .derecha{
-    border-left: 2px solid #252A2E;
+
+.tag-verde {
+    background-color: #4CAF50; /* Color de fondo verde */
 }
-.curriculum .fila .item{
-    padding: 25px;
-    margin-bottom: 30px;
-    background-color: #252A2E;
-    position: relative;
+
+.tag-azul {
+    background-color: #2196F3; /* Color de fondo azul */
 }
-.curriculum .fila .item h4{
-    font-size: 20px;
-    margin-bottom: 10px;
+
+.tag-amarillo {
+    background-color: #dfcb18; /* Color de fondo amarillo */
 }
-.curriculum .fila .item .casa{
-    color: #C439D1;
-    font-size: 22px;
-    font-weight: bold;
-    display: block;
+
+.tag-morado {
+    background-color: #661376; /* Color de fondo morado */
 }
-.curriculum .fila .item .fecha{
-    display: block;
-    color: #C439D1;
-    margin-bottom: 10px;
-}
-.curriculum .fila .item p{
-    line-height: 24px;
-}
-.curriculum .fila .izq{
-    border-right: 2px solid #C439D1;
-    margin-right: 20px;
-}
-.curriculum .fila .der{
-    border-left: 2px solid #C439D1;
-    margin-left: 20px;
-}
-.curriculum .fila .item .conectori{
-    height: 2px;
-    background-color: #C439D1;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    right: -47px;
-    z-index: 5;
-}
-.curriculum .fila .item .conectori .circuloi{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #C439D1;
-    float: right;
-    position: relative;
-    bottom: 4px;
-}
-.curriculum .fila .item .conectord{
-    height: 2px;
-    background-color: #C439D1;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    left: -47px;
-    z-index: 5;
-}
-.curriculum .fila .item .conectord .circulod{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #C439D1;
-    float: left;
-    position: relative;
-    bottom: 4px;
-}
-    SECCION CURRICULUM */
 
 /* SECCION CONTACTO */
 .contacto{
@@ -574,11 +537,16 @@ footer{
     width: 100%;
 }
 footer .redes{
-    margin-bottom: 20px;
+    display: flex; /* Aplicar flexbox al contenedor */
+    justify-content: center; /* Centrar horizontalmente los iconos */
+    gap: 10px; /* Espaciado entre los iconos */
+    margin-top: 20px; /* Añadir espacio entre el texto de arriba y los iconos */
 }
 footer .redes a{
     color: #fff;
-    display: inline-block;
+    display: flex;
+    justify-content: center;  /* Centrar los iconos horizontalmente */
+    align-items: center;  /* Centrar los iconos verticalmente */
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 100%;
@@ -588,6 +556,9 @@ footer .redes a{
     margin: 40px 5px;
     font-size: 20px;
     transition: .3s;
+}
+footer .redes a:hover{
+    background-color: #C439D1;
 }
 footer .arriba{
     display: block;
