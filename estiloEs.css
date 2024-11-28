@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #C439D1;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: #C439D1;
+}
+.nav-responsive{
+    background-color: #C439D1;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(images/backgroundDef.webp);
+    background-size: cover;
+    background-position: center;  /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat;  /* Asegura que la imagen no se repita */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #C439D1;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes {
+    display: flex; /* Aplicar flexbox al contenedor */
+    justify-content: center; /* Centrar horizontalmente los iconos */
+    gap: 10px; /* Espaciado entre los iconos */
+    margin-top: 20px; /* Añadir espacio entre el texto de arriba y los iconos */
+}
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: flex;  /* Usar flexbox para los enlaces */
+    justify-content: center;  /* Centrar los iconos horizontalmente */
+    align-items: center;  /* Centrar los iconos verticalmente */
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background-color: #C439D1;
+}
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: justify; 
+}
+.sobremi .contenido-seccion p span{
+    color: #C439D1;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col
+{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #C439D1;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #C439D1;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #C439D1;
+}
+.sobremi .fila .col .contenedor-intereses .interes:hover i{
+    color: #fff;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi.fila.col.contenedor-intereses.interes span{
+    font-size: 14px;
+    text-align: center;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #C439D1;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover{
+    border-color: #C439D1;  /* Cambia el color del borde en hover */
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/* SECCION S K I L L S */
+.skills {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 48px;
+    font-family: 'Righteous', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Contenedor para dividir en columnas */
+.contenedor-skills-columnas {
+    display: flex;
+    justify-content: space-between; /* Asegura que las columnas estén separadas */
+    flex-wrap: wrap; /* Permitir que las columnas se envuelvan si es necesario */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.columna-skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(2, 1fr);    /* Dos filas */
+    gap: 20px; /* Espacio entre las habilidades dentro de cada columna */
+    width: 45%; /* Cada columna ocupará el 45% del ancho disponible */
+}
+
+.columna-skills h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    grid-column: span 3; /* El título abarca las tres columnas */
+}
+
+.skill-content{
+    display:none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.skill-cuadro {
+    background-color: #2a2f32;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+    height: 120px;
+    width: 100%;
+}
+
+.skill-cuadro:hover {
+    background-color: #C439D1;
+}
+
+.skill-cuadro i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skill-cuadro span {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+/* Ocultar el contenido de skills inicialmente */
+#skills-content {
+    display: none;
+}
+
+/* Añadir una clase para mostrar el contenido */
+#skills-content.active {
+    display: flex;
+}
+.titulo-contenedor {
+    text-align: center;
+    margin: 0 auto;
+}
+/* Estilo interactivo para el título "Skills" */
+#toggle-skills {
+    font-size: 48px; /* Ajusta el tamaño según lo necesites */
+    font-family: 'Righteous';
+    color: #fff; /* Color del texto */
+    border-bottom: 3px solid #C439D1; /* Color y grosor del subrayado */
+    padding-bottom: 10px; /* Espacio entre el texto y el subrayado */
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.icono-bajo-titulo {
+    display: block;
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    color: #C439D1; /* Color del icono */
+    margin: 10px auto 0; /* Espacio entre el título y el icono */
+}
+
+#toggle-skills:hover {
+    color: #C439D1;
+}
+
+/* SECCION PORTFOLIO */
+.portfolio {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.portfolio h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.portfolio .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos en la fila */
+}
+
+.portfolio .galeria .proyecto {
+    position: relative;
+    max-width: 340px;
+    height: 550px; /* Establece una altura fija para todos los proyectos */
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Evita que la superposición se desborde */
+    display: flex; /* Agregar flex para alinear elementos en el centro */
+    flex-direction: column; /* Asegura que los hijos se coloquen en columna */
+}
+
+.portfolio .galeria .proyecto img {
+    width: 100%;
+    height: 550px; /* Establece una altura fija para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan sus proporciones sin deformarse */
+    display: block;
+}
+
+.portfolio .galeria .proyecto .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(196, 57, 209, 1), rgb(184, 150, 239));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.3s ease; /* Transición suave */
+    font-size: 18px;
+    letter-spacing: 1px; /* Ajusta el espaciado de letras si es necesario */
+    opacity: 0; /* Inicialmente oculto */
+    color: #fff; /* Cambiar color del texto dentro de la capa overlay */
+    z-index: 10; /* Asegura que la superposición esté por encima de otros elementos */
+}
+
+.portfolio .galeria .proyecto:hover .overlay {
+    opacity: 1; /* Mostrar la superposición al pasar el ratón */
+}
+
+.portfolio .galeria .proyecto .overlay h3 {
+    margin: 0; /* Eliminar el margen inferior para evitar el espacio extra */
+    padding-bottom: 10px; /* Espacio entre el título y el resto del texto */
+    color: #06171e; /* Cambiar color del título del proyecto */
+}
+
+.portfolio .galeria .proyecto .overlay p {
+    color: #242938; /* Cambiar color del párrafo */
+}
+
+/* etiquetas / tags para los proyectos */
+.tags {
+    margin-top: 10px; /* Espaciado entre la descripción y las etiquetas */
+    display: flex; /* Para alinearlas en fila */
+    justify-content: center; /* Centrar etiquetas horizontalmente */
+}
+
+.tag {
+    display: inline-block; /* Permite que las etiquetas estén en la misma línea */
+    padding: 4px 8px; /* Espaciado interno reducido */
+    margin: 3px; /* Espaciado entre las etiquetas */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    font-size: 12px; /* Tamaño de fuente reducido */
+}
+
+.tag-rojo {
+    background-color: #ad3128; /* Color de fondo rojo */
+}
+
+.tag-verde {
+    background-color: #4CAF50; /* Color de fondo verde */
+}
+
+.tag-azul {
+    background-color: #2196F3; /* Color de fondo azul */
+}
+
+.tag-amarillo {
+    background-color: #dfcb18; /* Color de fondo amarillo */
+}
+
+.tag-morado {
+    background-color: #661376; /* Color de fondo morado */
+}
+
+/* SECCION CONTACTO */
+.contacto{
+    background-image: url(img/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila {
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Alinear verticalmente si es necesario */
+    flex-wrap: wrap; /* Para que los elementos no se desborden en pantallas pequeñas */
+}
+.contacto .col {
+    width: 100%; /* Ajustamos al 100% para asegurarnos de que se centra */
+    max-width: 640px; /* Añadimos un máximo ancho para el iframe */
+    padding: 20px;
+    text-align: center;
+}
+.contacto .col iframe {
+    width: 100%; /* El iframe ocupará el 100% del contenedor */
+    height: 800px; /* Ajustamos la altura según tus necesidades */
+    margin: 0 auto; /* Centramos el iframe */
+    border: none;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #C439D1;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col img{
+    width: 100%;
+}
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    display: flex; /* Aplicar flexbox al contenedor */
+    justify-content: center; /* Centrar horizontalmente los iconos */
+    gap: 10px; /* Espaciado entre los iconos */
+    margin-top: 20px; /* Añadir espacio entre el texto de arriba y los iconos */
+}
+footer .redes a{
+    color: #fff;
+    display: flex;
+    justify-content: center;  /* Centrar los iconos horizontalmente */
+    align-items: center;  /* Centrar los iconos verticalmente */
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .redes a:hover{
+    background-color: #C439D1;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #C439D1;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}

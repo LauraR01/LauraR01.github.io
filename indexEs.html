@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.iconify.design/1/1.0.0/iconify.min.js"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Laura</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="images/profile1.webp" alt="">
+            </div>
+            <h1>Laura Ramos Achicanoy</h1>
+            <h2>videogames developer - Electronic Engineer</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/laura-ramos-achicanoy-video-game-dev/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://lauraramosachicanoy.itch.io/"><i class="fa-brands fa-itch-io"></i></a>
+                <a href="mailto:lr11ramos@gmail.com"><span class="iconify" data-icon="mdi:gmail" data-inline="false" style="width: 25px; height: 25px;"></span></a>
+                <a href="https://github.com/LauraR01"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>About me</h2>
+            <p><span>Hi, i'm Laura Ramos Achicanoy.</span> I'm an Electronic Engineer specializing in video game development, and I’ve been creating immersive experiences for the entertainment industry for several years. I’m passionate about pushing the boundaries of game technology, with deep expertise in Unity, C#, and Python, as well as graphic optimization, physics simulation, and hardware-software integration.</p>
+
+            <p>Throughout my journey, I've had the pleasure of working on both collaborative and solo projects, honing skills like teamwork, adaptability, creativity, time management, communication, and leadership. I love diving into technical challenges and finding innovative ways to bring ideas to life, always striving to add that extra level of polish to make sure every game truly captures the vision behind it.</p>
+                
+            <p>If you’d like to see some of my projects or chat about game development, feel free to reach out!</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Personal Information</h3>
+                    <ul>
+                        <li>
+                            <strong>Birthday</strong>
+                            28 - April
+                        </li>
+                        <li>
+                            <strong>Cellphone</strong>
+                            +57 314 641 3798
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            lr11ramos@gmail.com
+                        </li>
+                        <li>
+                            <strong>Ubication</strong>
+                            Colombia
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Interests</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>GAMES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSIC</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>TRAVEL</span>
+                        </div>
+                        <div class="interes">
+                            <span class="iconify" data-icon="streamline:vr-headset-1" data-inline="false" style="width: 45px; height: 45px;"></span>
+                            <span class="streamline--vr-headset-1"></span>
+                            <span>VR</span>
+                        </div>
+                        <div class="interes">
+                            <span class="iconify" data-icon="mynaui:ar" data-inline="false" style="width: 45px; height: 45px;"></span>
+                            <span>AR</span>
+                        </div>
+                        <div class="interes">
+                            <span class="iconify" data-icon="bx:swim" data-inline="false" style="width: 45px; height: 45px;"></span>
+                            <span class="bx--swim"></span>
+                            <span>SPORT</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>BOOKS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-pencil"></i>
+                            <span> WRITE AND READ </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>
+                Download CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+<section class="skills" id="skills">
+    <div class="contenido-seccion">
+        <div class="titulo-contenedor">
+            <h2 id="toggle-skills">SKILLS</h2>
+            <i class="fa-solid fa-angles-down icono-bajo-titulo"></i> <!-- Cambia "fa-star" por el icono que desees -->
+        </div>
+        <div class="contenedor-skills-columnas" id="skills-content">
+            <!-- Technical Skills -->
+            <div class="columna-skills">
+                <h3>Technical Skills</h3>
+                <div class="skill-cuadro">
+                    <i class="fa-brands fa-unity"></i>
+                    <span>Unity</span>
+                </div>
+                <div class="skill-cuadro">
+                    <span class="iconify" data-icon="hugeicons:computer-programming-02" style="width: 40px; height: 40px;"></span>
+                    <span>C#</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-cuadro">
+                    <span class="iconify" data-icon="simple-icons:blender" style="width: 40px; height: 40px;"></span>
+                    <span>Blender</span>
+                </div>
+                <div class="skill-cuadro">
+                    <span class="iconify" data-icon="simple-icons:autocad" style="width: 40px; height: 40px;"></span>
+                    <span>Autocad</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-file-code"></i>
+                    <span>HTML & CSS</span>
+                </div>
+            </div>
+            
+            <!-- Professional Skills -->
+            <div class="columna-skills">
+                <h3>Professional Skills</h3>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Comunication</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Team work</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Creativity</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Dedication</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Proyect Management</span>
+                </div>
+                <div class="skill-cuadro">
+                    <i class="fa-solid fa-handshake"></i>
+                    <span>leadership</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+            <a href="https://kamocreative.itch.io/tesoro-subterraneo">
+                <div class="proyecto">
+                    <img src="images/proyecto2.png" alt="Tesoro subterraneo">
+                    <div class="overlay">
+                        <h3>Tesoro subterraneo</h3>
+                        <p>Dig Deeper Game Jam</p>
+                        <p>My contributions:</p>
+                        <p><i class="fa-solid fa-gamepad"></i>player and enemies design & code</p>
+                        <div class="tags">
+                            <span class="tag tag-rojo">C#</span>
+                            <span class="tag tag-verde">Unity</span>
+                            <span class="tag tag-azul">GameDev</span>
+                            <span class="tag tag-morado">gamejam</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://lauraramosachicanoy.itch.io/globito-busca-su-hogar">
+                <div class="proyecto">
+                    <img src="images/proyecto1.png" alt="Globito busca su hogar">
+                    <div class="overlay">
+                        <h3>Globito busca su hogar</h3>
+                        <p>Descripción</p>
+                        <p>My contributions:</p>
+                        <p><i class="fa-solid fa-gamepad"></i>Part of design and code</p>
+                        <div class="tags">
+                            <span class="tag tag-rojo">C#</span>
+                            <span class="tag tag-verde">Unity</span>
+                            <span class="tag tag-azul">GameDev</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://revistas.ucc.edu.co/index.php/in/article/view/4934">
+                <div class="proyecto">
+                    <img src="images/proyecto3.png" alt="Pedagogical Support Tools">
+                    <div class="overlay">
+                        <h3>Pedagogical Support Tools: Integrating Digital Tools for Learning about AC Electrical Circuits within Electronic Engineering</h3>
+                        <p>Descripción</p>
+                        <p>My contributions:</p>
+                        <p><i class="fa-solid fa-gamepad"></i>All design, art and code</p>
+                        <div class="tags">
+                            <span class="tag tag-rojo">C#</span>
+                            <span class="tag tag-verde">Unity</span>
+                            <span class="tag tag-amarillo">Education</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- SECCION CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>CONTACT</h2>
+        <p>Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below.</p>
+        <!--
+        <div class="fila"> 
+            <div class="col">
+                <iframe src="https://forms.gle/AxeWMxPPZ5Abfi2y8" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            </div>
+        </div>
+        Formulario de Google -->
+    </div>
+</section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/laura-ramos-achicanoy-video-game-dev/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://lauraramosachicanoy.itch.io/"><i class="fa-brands fa-itch-io"></i></a>
+            <a href="mailto:lr11ramos@gmail.com"><span class="iconify" data-icon="mdi:gmail" data-inline="false" style="width: 25px; height: 25px;"></span></a>
+            <a href="https://github.com/LauraR01"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
