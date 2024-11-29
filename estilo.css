@@ -63,7 +63,7 @@ html{
     background-size: cover;
     background-position: center;  /* Centra la imagen horizontal y verticalmente */
     background-repeat: no-repeat;  /* Asegura que la imagen no se repita */
-    height: 100vh;
+    height: 130vh;
     color: #fff;
     display: flex;
     align-items: center;
@@ -229,11 +229,12 @@ html{
     width: 100%;
 }
 
-/* SECCION S K I L L S */
+/* SECCION SKILLS */
 .skills {
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
+    text-align: center; /* Asegura que los textos estén centrados */
 }
 
 .skills .contenido-seccion {
@@ -244,39 +245,39 @@ html{
 .skills h2 {
     font-size: 48px;
     font-family: 'Righteous', sans-serif;
-    text-align: center;
     padding: 20px 0;
+}
+
+.icono-bajo-titulo {
+    display: block;
+    font-size: 24px;
+    color: #C439D1;
+    margin: 10px auto;
 }
 
 /* Contenedor para dividir en columnas */
 .contenedor-skills-columnas {
     display: flex;
-    justify-content: space-between; /* Asegura que las columnas estén separadas */
-    flex-wrap: wrap; /* Permitir que las columnas se envuelvan si es necesario */
-    gap: 20px; /* Espacio entre las columnas */
+    justify-content: space-between; /* Distribuir columnas */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .columna-skills {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-template-rows: repeat(2, 1fr);    /* Dos filas */
-    gap: 20px; /* Espacio entre las habilidades dentro de cada columna */
-    width: 45%; /* Cada columna ocupará el 45% del ancho disponible */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 45%; /* Ajustar ancho de las columnas */
+    margin: auto;
 }
 
 .columna-skills h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    text-align: center;
-    grid-column: span 3; /* El título abarca las tres columnas */
+    grid-column: span 3; /* Título ocupa todas las columnas */
 }
 
-.skill-content{
-    display:none;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-
+/* Cuadros de habilidades */
 .skill-cuadro {
     background-color: #2a2f32;
     border-radius: 10px;
@@ -305,42 +306,6 @@ html{
     font-size: 14px;
     color: #fff;
 }
-/* Ocultar el contenido de skills inicialmente */
-#skills-content {
-    display: none;
-}
-
-/* Añadir una clase para mostrar el contenido */
-#skills-content.active {
-    display: flex;
-}
-.titulo-contenedor {
-    text-align: center;
-    margin: 0 auto;
-}
-/* Estilo interactivo para el título "Skills" */
-#toggle-skills {
-    font-size: 48px; /* Ajusta el tamaño según lo necesites */
-    font-family: 'Righteous';
-    color: #fff; /* Color del texto */
-    border-bottom: 3px solid #C439D1; /* Color y grosor del subrayado */
-    padding-bottom: 10px; /* Espacio entre el texto y el subrayado */
-    display: inline-block;
-    margin: 0 auto;
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-.icono-bajo-titulo {
-    display: block;
-    font-size: 24px; /* Ajusta el tamaño del icono */
-    color: #C439D1; /* Color del icono */
-    margin: 10px auto 0; /* Espacio entre el título y el icono */
-}
-
-#toggle-skills:hover {
-    color: #C439D1;
-}
 
 /* SECCION PORTFOLIO */
 .portfolio {
@@ -361,27 +326,33 @@ html{
     padding: 20px 0;
 }
 
+.portfolio .carrusel {
+    display: flex;
+    overflow: hidden;
+    position: relative; /* Asegura que los botones se posicionen dentro de este contenedor */
+    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+}
+
 .portfolio .galeria {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos en la fila */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
 }
 
 .portfolio .galeria .proyecto {
     position: relative;
-    max-width: 340px;
+    width: 340px;
     height: 550px; /* Establece una altura fija para todos los proyectos */
-    margin: 10px;
+    margin: 0 12px;
     cursor: pointer;
-    overflow: hidden; /* Evita que la superposición se desborde */
-    display: flex; /* Agregar flex para alinear elementos en el centro */
-    flex-direction: column; /* Asegura que los hijos se coloquen en columna */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio .galeria .proyecto img {
     width: 100%;
-    height: 550px; /* Establece una altura fija para las imágenes */
-    object-fit: cover; /* Asegura que las imágenes mantengan sus proporciones sin deformarse */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del proyecto */
+    object-fit: cover;
     display: block;
 }
 
@@ -396,62 +367,64 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: opacity 0.3s ease; /* Transición suave */
+    transition: opacity 0.3s ease;
     font-size: 18px;
-    letter-spacing: 1px; /* Ajusta el espaciado de letras si es necesario */
-    opacity: 0; /* Inicialmente oculto */
-    color: #fff; /* Cambiar color del texto dentro de la capa overlay */
-    z-index: 10; /* Asegura que la superposición esté por encima de otros elementos */
+    opacity: 0;
+    color: #fff;
 }
 
 .portfolio .galeria .proyecto:hover .overlay {
-    opacity: 1; /* Mostrar la superposición al pasar el ratón */
+    opacity: 1;
 }
 
-.portfolio .galeria .proyecto .overlay h3 {
-    margin: 0; /* Eliminar el margen inferior para evitar el espacio extra */
-    padding-bottom: 10px; /* Espacio entre el título y el resto del texto */
-    color: #06171e; /* Cambiar color del título del proyecto */
+/* Configuración del carrusel */
+.carrusel {
+    position: relative; /* Necesario para posicionar los botones */
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; /* Asegura que la altura se ajuste correctamente */
+    scroll-behavior: smooth;
 }
 
-.portfolio .galeria .proyecto .overlay p {
-    color: #242938; /* Cambiar color del párrafo */
+.proyecto {
+    flex: 0 0 auto;
+    margin: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* etiquetas / tags para los proyectos */
-.tags {
-    margin-top: 10px; /* Espaciado entre la descripción y las etiquetas */
-    display: flex; /* Para alinearlas en fila */
-    justify-content: center; /* Centrar etiquetas horizontalmente */
+/* Botones de navegación */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;  /* Centrado vertical */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
 }
 
-.tag {
-    display: inline-block; /* Permite que las etiquetas estén en la misma línea */
-    padding: 4px 8px; /* Espaciado interno reducido */
-    margin: 3px; /* Espaciado entre las etiquetas */
-    border-radius: 5px; /* Bordes redondeados */
-    color: white; /* Color del texto */
-    font-size: 12px; /* Tamaño de fuente reducido */
+button.prev {
+    left: 20px;
 }
 
-.tag-rojo {
-    background-color: #ad3128; /* Color de fondo rojo */
+button.next {
+    right: 20px;
 }
 
-.tag-verde {
-    background-color: #4CAF50; /* Color de fondo verde */
+/* Ajustar el tamaño de los proyectos */
+.proyecto img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.tag-azul {
-    background-color: #2196F3; /* Color de fondo azul */
-}
-
-.tag-amarillo {
-    background-color: #dfcb18; /* Color de fondo amarillo */
-}
-
-.tag-morado {
-    background-color: #661376; /* Color de fondo morado */
+@media screen and (max-width: 768px) {
+    .proyecto {
+        width: 90%; /* Proyectos ocupan un 90% en pantallas pequeñas */
+    }
 }
 
 /* SECCION CONTACTO */
