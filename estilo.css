@@ -326,23 +326,25 @@ html{
     padding: 20px 0;
 }
 
+/* Carrusel */
 .portfolio .carrusel {
     display: flex;
     overflow: hidden;
-    position: relative; /* Asegura que los botones se posicionen dentro de este contenedor */
-    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    position: relative; /* Para posicionar los botones respecto al contenedor */
+    width: 100%;
+    height: auto; /* Altura se ajusta automáticamente */
+    align-items: center; /* Asegura que los proyectos estén centrados verticalmente */
 }
 
 .portfolio .galeria {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
+    transition: transform 0.5s ease-in-out; /* Movimiento suave */
 }
 
 .portfolio .galeria .proyecto {
-    position: relative;
     width: 340px;
-    height: 550px; /* Establece una altura fija para todos los proyectos */
-    margin: 0 12px;
+    height: 550px; /* Altura fija */
+    margin: 0 20px; /* Espaciado entre proyectos */
     cursor: pointer;
     overflow: hidden;
     display: flex;
@@ -351,7 +353,7 @@ html{
 
 .portfolio .galeria .proyecto img {
     width: 100%;
-    height: 100%; /* Asegura que la imagen ocupe toda la altura del proyecto */
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -377,26 +379,10 @@ html{
     opacity: 1;
 }
 
-/* Configuración del carrusel */
-.carrusel {
-    position: relative; /* Necesario para posicionar los botones */
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 100%; /* Asegura que la altura se ajuste correctamente */
-    scroll-behavior: smooth;
-}
-
-.proyecto {
-    flex: 0 0 auto;
-    margin: 10px;
-    transition: transform 0.5s ease-in-out;
-}
-
 /* Botones de navegación */
 button.prev, button.next {
     position: absolute;
-    top: 50%;  /* Centrado vertical */
+    top: 50%; /* Centrado vertical respecto al carrusel */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -408,22 +394,23 @@ button.prev, button.next {
 }
 
 button.prev {
-    left: 20px;
+    left: 10px;
 }
 
 button.next {
-    right: 20px;
+    right: 10px;
 }
 
-/* Ajustar el tamaño de los proyectos */
-.proyecto img {
-    width: 100%;
-    object-fit: cover;
-}
-
+/* Responsive */
 @media screen and (max-width: 768px) {
-    .proyecto {
-        width: 90%; /* Proyectos ocupan un 90% en pantallas pequeñas */
+    .portafolio .galeria .proyecto {
+        width: 80%; /* Proyectos ocupan más espacio en pantallas pequeñas */
+        margin: 0 10px;
+    }
+
+    button.prev, button.next {
+        font-size: 18px; /* Botones más pequeños */
+        padding: 8px;
     }
 }
 

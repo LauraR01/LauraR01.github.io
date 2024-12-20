@@ -24,17 +24,3 @@ function anteriorProyecto() {
 // Botones de navegación
 document.querySelector('.prev').addEventListener('click', anteriorProyecto);
 document.querySelector('.next').addEventListener('click', siguienteProyecto);
-
-// Configurar el carrusel automático con un intervalo de 3 segundos (3000ms)
-let autoCarrusel = setInterval(siguienteProyecto, 3000); // Cambiar automáticamente cada 3 segundos
-
-// Detener el carrusel automático cuando el usuario hace clic en los botones
-document.querySelector('.prev').addEventListener('click', () => {
-    clearInterval(autoCarrusel);
-    autoCarrusel = setInterval(siguienteProyecto, 3000);  // Reiniciar el intervalo después de hacer clic
-});
-
-document.querySelector('.next').addEventListener('click', () => {
-    clearInterval(autoCarrusel);
-    autoCarrusel = setInterval(siguienteProyecto, 3000);  // Reiniciar el intervalo después de hacer clic
-});
