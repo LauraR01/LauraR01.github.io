@@ -248,29 +248,20 @@ html{
     padding: 20px 0;
 }
 
-/* Carrusel */
-.portfolio .carrusel {
-    display: flex;
-    overflow: hidden;
-    position: relative; /* Para posicionar los botones respecto al contenedor */
-    width: 100%;
-    height: auto; /* Altura se ajusta automáticamente */
-    align-items: center; /* Asegura que los proyectos estén centrados verticalmente */
-}
-
+/* Galería de tarjetas */
 .portfolio .galeria {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Movimiento suave */
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar las tarjetas */
+    gap: 20px; /* Espaciado entre tarjetas */
 }
 
 .portfolio .galeria .proyecto {
     width: 340px;
-    height: 550px; /* Altura fija */
-    margin: 0 20px; /* Espaciado entre proyectos */
+    height: 550px;
     cursor: pointer;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    position: relative; /* Para contenido interno posicionado */
 }
 
 .portfolio .galeria .proyecto img {
@@ -280,60 +271,18 @@ html{
     display: block;
 }
 
-.portfolio .galeria .proyecto .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: linear-gradient(rgba(196, 57, 209, 1), rgb(184, 150, 239));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: opacity 0.3s ease;
-    font-size: 18px;
-    opacity: 0;
+/* Texto flotante único */
+.tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-}
-
-.portfolio .galeria .proyecto:hover .overlay {
-    opacity: 1;
-}
-
-/* Botones de navegación */
-button.prev, button.next {
-    position: absolute;
-    top: 50%; /* Centrado vertical respecto al carrusel */
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 24px;
     padding: 10px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-button.prev {
-    left: 10px;
-}
-
-button.next {
-    right: 10px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .portafolio .galeria .proyecto {
-        width: 80%; /* Proyectos ocupan más espacio en pantallas pequeñas */
-        margin: 0 10px;
-    }
-
-    button.prev, button.next {
-        font-size: 18px; /* Botones más pequeños */
-        padding: 8px;
-    }
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
 }
 
 /* SECCION SKILLS */
