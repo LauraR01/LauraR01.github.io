@@ -1,34 +1,40 @@
-// Crear un tooltip dinámico
-const tooltip = document.createElement("div");
-tooltip.className = "tooltip";
-document.body.appendChild(tooltip);
+let menuVisible = false;
+//Función que oculta o muestra el menu
+function mostrarOcultarMenu(){
+    if(menuVisible){
+        document.getElementById("nav").classList ="";
+        menuVisible = false;
+    }else{
+        document.getElementById("nav").classList ="responsive";
+        menuVisible = true;
+    }
+}
 
-// Datos para cada proyecto (puedes ampliar estos detalles si es necesario)
-const projectDescriptions = {
-  "images/proyecto2.png": "Tesoro Subterraneo: Dig Deeper Game Jam. Contributions: Player and enemies design & code.",
-  "images/proyecto1.png": "Globito Busca Su Hogar: Description. Contributions: Part of design and code.",
-  "images/proyecto3.png": "Pedagogical Support Tools: Integrating Digital Tools for Learning. Contributions: All design, art, and code.",
-};
+function seleccionar(){
+    //oculto el menu una vez que selecciono una opcion
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
+}
+//Funcion que aplica las animaciones de las habilidades
+function efectoHabilidades(){
+    var skills = document.getElementById("skills");
+    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+    if(distancia_skills >= 300){
+        let habilidades = document.getElementsByClassName("progreso");
+        habilidades[0].classList.add("javascript");
+        habilidades[1].classList.add("htmlcss");
+        habilidades[2].classList.add("photoshop");
+        habilidades[3].classList.add("wordpress");
+        habilidades[4].classList.add("drupal");
+        habilidades[5].classList.add("comunicacion");
+        habilidades[6].classList.add("trabajo");
+        habilidades[7].classList.add("creatividad");
+        habilidades[8].classList.add("dedicacion");
+        habilidades[9].classList.add("proyect");
+    }
+}
 
-// Añadir eventos a las tarjetas
-document.querySelectorAll(".proyecto").forEach((proyecto) => {
-  proyecto.addEventListener("mouseover", (e) => {
-    const imgSrc = proyecto.querySelector("img").getAttribute("src");
-    const description = projectDescriptions[imgSrc] || "Description not available";
-
-    // Mostrar el texto en el tooltip
-    tooltip.textContent = description;
-    tooltip.style.opacity = "1";
-  });
-
-  proyecto.addEventListener("mousemove", (e) => {
-    // Posicionar el tooltip cerca del puntero
-    tooltip.style.left = e.pageX + 15 + "px";
-    tooltip.style.top = e.pageY + 15 + "px";
-  });
-
-  proyecto.addEventListener("mouseleave", () => {
-    // Ocultar el tooltip
-    tooltip.style.opacity = "0";
-  });
-});
+//detecto el scrolling para aplicar la animacion de la barra de habilidades
+window.onscroll = function(){
+    efectoHabilidades();
+} 
