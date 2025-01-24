@@ -229,6 +229,143 @@ html{
     width: 100%;
 }
 
+/* Estilos de la sección de cards */
+.cards-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.cards-section h2 {
+    font-size: 36px;
+    font-family: 'Righteous', sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de las cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos de la sección de cards */
+.cards-section {
+    background-color: #1e2326; /* Fondo negro */
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.cards-section h2 {
+    font-size: 36px;
+    font-family: 'Righteous', sans-serif;
+    margin-bottom: 30px;
+    color: #fff; /* Texto blanco */
+}
+
+/* Contenedor de las cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos de las cards */
+.card {
+    background-color: #1a1a1a; /* Fondo gris oscuro para contraste */
+    border: 1px solid #333; /* Borde ligeramente visible */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.card p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Contenedor de tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los tags se ajusten si no caben en una línea */
+    gap: 10px; /* Espaciado entre tags */
+    margin-top: 15px; /* Separación con otros elementos */
+    justify-content: center; /* Centrar los tags */
+}
+
+/* Estilos generales para los tags */
+.tag {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff; /* Texto blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para mayor profundidad */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación suave */
+}
+
+/* Estilos para colores específicos */
+.tag-rojo {
+    background-color: #E74C3C; /* Rojo */
+}
+
+.tag-verde {
+    background-color: #27AE60; /* Verde */
+}
+
+.tag-azul {
+    background-color: #3498DB; /* Azul */
+}
+
+.tag-morado {
+    background-color: #9B59B6; /* Morado */
+}
+
+.tag-amarillo {
+    background-color: #c7b834; /* Amarillo */
+}
+
+.tag-rosado {
+    background-color: #e933cb; /* Rosado */
+}
+
+
+/* Efecto hover */
+.tag:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra más grande */
+}
+
+
 /* SECCION SKILLS */
 .skills {
     background-color: #1e2326;
