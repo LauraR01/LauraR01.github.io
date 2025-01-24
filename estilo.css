@@ -283,6 +283,9 @@ html{
     width: 300px;
     padding: 20px;
     text-align: center;
+    perspective: 1000px; /* Define la profundidad 3D */
+    transform-style: preserve-3d; /* Permite transformaciones 3D */
+    backface-visibility: hidden; /* Oculta la cara trasera */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #fff; /* Texto blanco */
     text-decoration: none; /* Eliminar subrayado */
