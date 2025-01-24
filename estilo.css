@@ -288,7 +288,7 @@ html{
     backface-visibility: hidden; /* Oculta la cara trasera */
     -webkit-transform: rotateY(0); /* Prefijo para Chrome */
     -webkit-backface-visibility: hidden; /* Prefijo para Chrome */
-    transition: -webkit-transform 0.6s ease; /* Prefijo para Chrome */box-shadow 0.3s ease;
+    transition: -webkit-transform 0.6s ease, box-shadow 0.3s ease;
     color: #fff; /* Texto blanco */
     text-decoration: none; /* Eliminar subrayado */
 }
@@ -376,7 +376,7 @@ html{
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
-    text-align: center; /* Asegura que los textos estén centrados */
+    text-align: center; /* Centra los textos */
 }
 
 .skills .contenido-seccion {
@@ -397,26 +397,32 @@ html{
     margin: 10px auto;
 }
 
+
+
 /* Contenedor para dividir en columnas */
 .contenedor-skills-columnas {
     display: flex;
-    justify-content: space-between; /* Distribuir columnas */
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir que las columnas se ajusten en pantallas pequeñas */
     gap: 20px;
+    
+    
 }
 
 .columna-skills {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste dinámico de columnas */
     gap: 20px;
-    width: 45%; /* Ajustar ancho de las columnas */
+    width: 45%; /* Ancho predeterminado de las columnas */
     margin: auto;
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
 }
 
 .columna-skills h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    grid-column: span 3; /* Título ocupa todas las columnas */
+    grid-column: span 3; /* Título ocupa todo el ancho */
+    text-align: center; /* Títulos centrados */
 }
 
 /* Cuadros de habilidades */
@@ -448,6 +454,35 @@ html{
     font-size: 14px;
     color: #fff;
 }
+
+/* Ajustes responsivos */
+@media screen and (max-width: 700px) {
+    .contenedor-skills-columnas {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        align-items: center; /* Centra las columnas */
+    }
+
+    .columna-skills {
+        width: 100%; /* Cada columna ocupa el ancho completo */
+        margin-bottom: 20px; /* Espaciado entre columnas */
+    }
+
+    .skill-cuadro {
+        flex-direction: row; /* Mantiene los íconos alineados horizontalmente con el texto */
+        justify-content: flex-start;
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 10px 15px; /* Ajusta el relleno */
+    }
+
+    .skill-cuadro i {
+        margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    }
+
+    .skill-cuadro span {
+        font-size: 16px; /* Ajusta el tamaño del texto para mayor legibilidad */
+    }
+}
+
 
 /* SECCION CONTACTO */
 .contacto{
@@ -619,17 +654,6 @@ footer .arriba{
     }
     .curriculum .fila .derecha{
         margin-left: 20px;
-    }
-
-    .portfolio .galeria{
-        display: block;
-        width: 100%;
-    }
-    .portfolio .galeria .proyecto{
-        max-width: 100%;
-    }
-    .portfolio .galeria .proyecto img{
-        width: 100%;
     }
     .contacto .fila{
         display: block;
