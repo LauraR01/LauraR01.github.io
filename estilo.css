@@ -9,6 +9,10 @@ html{
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
+html, body {
+    /* Evitar que haya un desbordamiento horizontal */
+    overflow-x: hidden;
+}
 /* MENU */
 .contenedor-header{
     background: #1e2326;
@@ -483,6 +487,32 @@ html{
     }
 }
 
+/* Asegurar que la sección skills no cause desbordamiento */
+#skills {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Hacer los bloques de habilidades más pequeños en móviles */
+@media (max-width: 768px) {
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progreso {
+        width: 90%;  /* Reduce el tamaño para evitar que se extienda demasiado */
+        font-size: 14px;  /* Reduce el tamaño del texto */
+    }
+
+    #skills h2, #skills p {
+        font-size: 9px; /* Ajusta los títulos y párrafos dentro de skills */
+        text-align: center; /* Centra el texto para mejor legibilidad */
+    }
+}
+
 
 /* SECCION CONTACTO */
 .contacto{
@@ -659,6 +689,6 @@ footer .arriba{
         display: block;
     }
     .contacto .fila .col{
-        width: 100%;
+        width: fit-content;
     }
 }
