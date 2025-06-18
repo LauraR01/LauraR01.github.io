@@ -59,6 +59,28 @@ html, body {
     cursor: pointer;
     display: none;
 }
+.language-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px; /* Ajusta el espacio con el menú */
+}
+
+.language-buttons .lang-btn {
+    background-color: transparent;
+    border: 2px solid #C439D1;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-buttons .lang-btn:hover {
+    background-color: #C439D1;
+    color: #fff;
+}
+
 
 /* SECCION I N I C I O */
 .inicio{
@@ -231,6 +253,14 @@ html, body {
 }
 .sobremi button:hover .overlay{
     width: 100%;
+}
+.sobremi .fila .col .month {
+    background-color: transparent;
+    padding: 0;
+    font-weight: normal;
+    border-radius: 0;
+    color: inherit; /* Para que tome el mismo color del texto normal */
+    text-decoration: none;
 }
 
 /* Estilos de la sección de cards */

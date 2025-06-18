@@ -18,15 +18,20 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">HOME</a></li>
-                    <li><a href="#cards-section" onclick="seleccionar()">PORTFOLIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">ABOUT ME</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
+                    <li><a href="#inicio" onclick="seleccionar()" data-i18n="menu_home">HOME</a></li>
+                    <li><a href="#cards-section" onclick="seleccionar()" data-i18n="menu_portfolio">PORTFOLIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()" data-i18n="menu_about">ABOUT ME</a></li>
+                    <li><a href="#skills" onclick="seleccionar()" data-i18n="menu_skills">SKILLS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()" data-i18n="menu_contact">CONTACT</a></li>
+
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="language-buttons">
+                <button onclick="setLanguage('es')" class="lang-btn">ESP</button>
+                <button onclick="setLanguage('en')" class="lang-btn">ENG</button>
             </div>
         </header>
     </div>
@@ -38,7 +43,7 @@
                 <img src="images/profile1.webp" alt="">
             </div>
             <h1>Laura Ramos Achicanoy</h1>
-            <h2>videogames developer - Electronic Engineer</h2>
+            <h2 data-i18n="inicio_subtitulo">videogames developer - Electronic Engineer</h2>
             <div class="redes">
                 <a href="www.linkedin.com/in/laura-ramos-achicanoy-vr-ar-developer"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://lauraramosachicanoy.itch.io/"><i class="fa-brands fa-itch-io"></i></a>
@@ -51,15 +56,15 @@
 <!-- SECCIÓN DE CARDS -->
 <section id="cards-section" class="cards-section">
     <div class="contenido-seccion">
-        <h2>Portfolio</h2>
+        <h2 data-i18n="portfolio_title">Portfolio</h2>
         <div class="cards-container">
             <!-- Card 1 -->
             <a href="https://lauraramosachicanoy.itch.io/radioactive-trail" target="_blank" class="card">
                 <img src="images/Portada.png" alt="Feature 1">
                 <h3>Radioactive trail</h3>
-                <p>Spittle's Sewer Saga is a stylized action-adventure where players help Spittle, a brave rat, recover stolen cheese, defeat the Exterminator, and restore hope to the sewers.</p><br>
-                <p>My contributions:</p>
-                <p><i class="fa-solid fa-gamepad"></i> UI-UX developer & Documentation</p>
+                <p data-i18n="project1_description">Spittle's Sewer Saga is a stylized action-adventure where players help Spittle, a brave rat, recover stolen cheese, defeat the Exterminator, and restore hope to the sewers.</p>
+                <p data-i18n="project1_contributions">My contributions:</p>
+                <p><i class="fa-solid fa-gamepad"></i> <span data-i18n="project1_roles">UI-UX developer & Documentation</span></p>
                         <div class="tags">
                             <span class="tag tag-rojo">C#</span>
                             <span class="tag tag-verde">Unity</span>
@@ -71,9 +76,9 @@
             <a href="https://lauraramosachicanoy.itch.io/echoquest" target="_blank" class="card">
                 <img src="images/proyecto4.png" alt="Feature 2">
                 <h3>Echoquest: Galactic frontier</h3>
-                <p>EchoQuest is an intergalactic adventure to help Echo, a robot, survive hostile planets and save humanity.</p><br>
-                <p>My contributions:</p>
-                <p><i class="fa-solid fa-gamepad"></i> UI-UX developer, Documentation & Pitch</p>
+                <p data-i18n="project2_description">EchoQuest is an intergalactic adventure to help Echo, a robot, survive hostile planets and save humanity.</p>
+                <p data-i18n="project2_contributions">My contributions:</p>
+                <p><i class="fa-solid fa-gamepad"></i> <span data-i18n="project2_roles">UI-UX developer, Documentation & Pitch</span></p>
                         <div class="tags">
                             <span class="tag tag-rojo">C#</span>
                             <span class="tag tag-verde">Unity</span>
@@ -84,10 +89,10 @@
             <!-- Card 3 -->
             <a href="https://revistas.ucc.edu.co/index.php/in/article/view/4934/3750" target="_blank" class="card">
                 <img src="images/proyecto5.png" alt="Feature 3">
-                <h3>Pedagogical support tools</h3>
-                <p>Integrating Digital Tools for Learning about AC Electrical Circuits within Electronic Engineering.</p><br>
-                <p>My contributions:</p>
-                <p><i class="fa-solid fa-gamepad"></i> Design & code </p>
+                <h3 data-i18n="project3_title">Pedagogical support tools</h3>
+                <p data-i18n="project3_description">Integrating Digital Tools for Learning about AC Electrical Circuits within Electronic Engineering.</p>
+                <p data-i18n="project3_contributions">My contributions:</p>
+                <p><i class="fa-solid fa-gamepad"></i> <span data-i18n="project3_roles">Design & code</span></p>
                         <div class="tags">
                             <span class="tag tag-rojo">C#</span>
                             <span class="tag tag-verde">Unity</span>
@@ -104,74 +109,64 @@
     <!-- SECCION SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-            <h2>About me</h2>
-            <p><span>Hi, i'm Laura Ramos Achicanoy.</span> I'm an Electronic Engineer specializing in video game development, and I’ve been creating immersive experiences for the entertainment industry for several years. I’m passionate about pushing the boundaries of game technology, with deep expertise in Unity, C#, and Python, as well as graphic optimization, physics simulation, and hardware-software integration.</p>
+            <h2 data-i18n="aboutme_title">About me</h2>
+            <p><span data-i18n="aboutme_intro">Hi, I'm Laura Ramos Achicanoy.</span> <span data-i18n="aboutme_paragraph1">I'm an Electronic Engineer specializing in video game development, and I’ve been creating immersive experiences for the entertainment industry for several years...</span></p>
 
-            <p>Throughout my journey, I've had the pleasure of working on both collaborative and solo projects, honing skills like teamwork, adaptability, creativity, time management, communication, and leadership. I love diving into technical challenges and finding innovative ways to bring ideas to life, always striving to add that extra level of polish to make sure every game truly captures the vision behind it.</p>
+            <p data-i18n="aboutme_paragraph2">Throughout my journey, I've had the pleasure of working on both collaborative and solo projects, honing skills like teamwork, adaptability, creativity, time management, communication, and leadership...</p>
                 
-            <p>If you’d like to see some of my projects or chat about game development, feel free to reach out!</p>
+            <p data-i18n="aboutme_paragraph3">If you’d like to see some of my projects or chat about game development, feel free to reach out!</p>
 
             <div class="fila">
                 <!-- datos personales -->
                 <div class="col">
-                    <h3>Personal Information</h3>
+                    <h3 data-i18n="aboutme_personalinfo">Personal Information</h3>
                     <ul>
                         <li>
-                            <strong>Birthday</strong>
-                            28 - April
+                            <strong data-i18n="aboutme_birthday">Birthday</strong> 28 - <span class="month" data-i18n="aboutme_month">April</span>
                         </li>
-                        <li>
-                            <strong>Cellphone</strong>
-                            +57 314 641 3798
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            lr11ramos@gmail.com
-                        </li>
-                        <li>
-                            <strong>Ubication</strong>
-                            Colombia
-                        </li>
+                        <li><strong data-i18n="aboutme_cellphone">Cellphone</strong> +57 314 641 3798</li>
+                        <li><strong data-i18n="aboutme_email">Email</strong> lr11ramos@gmail.com</li>
+                        <li><strong data-i18n="aboutme_location">Ubication</strong> Colombia</li>
                     </ul>
                 </div>
 
                 <!-- intereses -->
                 <div class="col">
-                    <h3>Interests</h3>
+                    <h3 data-i18n="aboutme_interests">Interests</h3>
                     <div class="contenedor-intereses">
                         <div class="interes">
                             <i class="fa-solid fa-gamepad"></i>
-                            <span>GAMES</span>
+                            <span data-i18n="interest_games">GAMES</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-headphones"></i>
-                            <span>MUSIC</span>
+                            <span data-i18n="interest_music">MUSIC</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-plane"></i>
-                            <span>TRAVEL</span>
+                            <span data-i18n="interest_travel">TRAVEL</span>
                         </div>
                         <div class="interes">
                             <span class="iconify" data-icon="streamline:vr-headset-1" data-inline="false" style="width: 45px; height: 45px;"></span>
                             <span class="streamline--vr-headset-1"></span>
-                            <span>VR</span>
+                            <span data-i18n="interest_vr">VR</span>
                         </div>
                         <div class="interes">
                             <span class="iconify" data-icon="mynaui:ar" data-inline="false" style="width: 45px; height: 45px;"></span>
-                            <span>AR</span>
+                            <span data-i18n="interest_ar">AR</span>
                         </div>
                         <div class="interes">
                             <span class="iconify" data-icon="bx:swim" data-inline="false" style="width: 45px; height: 45px;"></span>
                             <span class="bx--swim"></span>
-                            <span>SPORT</span>
+                            <span data-i18n="interest_sport">SPORT</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-book"></i>
-                            <span>BOOKS</span>
+                            <span data-i18n="interest_books">BOOKS</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-pencil"></i>
-                            <span> WRITE AND READ </span>
+                            <span data-i18n="interest_write">WRITE AND READ</span>
                         </div>
                     </div>
                 </div>
@@ -186,12 +181,12 @@
 <!-- SECCION SKILLS -->
 <section class="skills" id="skills">
     <div class="contenido-seccion">
-        <h2 id="skills-title">SKILLS</h2>
+        <h2 id="skills-title" data-i18n="skills_title">SKILLS</h2>
         <i class="fa-solid fa-angles-down icono-bajo-titulo"></i>
         <!-- Technical Skills -->
         <div class="contenedor-skills-columnas">
             <div class="columna-skills">
-                <h3>Technical Skills</h3>
+                <h3 data-i18n="technical_skills">Technical Skills</h3>
                 <div class="skill-cuadro">
                     <i class="fa-brands fa-unity"></i>
                     <span>Unity</span>
@@ -219,30 +214,30 @@
             </div>
             <!-- Professional Skills -->
             <div class="columna-skills">
-                <h3>Professional Skills</h3>
+                <h3 data-i18n="professional_skills">Professional Skills</h3>
                 <div class="skill-cuadro">
                     <i class="fa-solid fa-comments"></i>
-                    <span>Comunication</span>
+                    <span data-i18n="skill_communication">Communication</span>
                 </div>
                 <div class="skill-cuadro">
                     <i class="fa-solid fa-users"></i>
-                    <span>Team work</span>
+                    <span data-i18n="skill_teamwork">Team work</span>
                 </div>
                 <div class="skill-cuadro">
                     <span class="iconify" data-icon="mage:light-bulb" style="width: 40px; height: 40px;"></span>
-                    <span>Creativity</span>
+                    <span data-i18n="skill_creativity">Creativity</span>
                 </div>
                 <div class="skill-cuadro">
                     <i class="fa-solid fa-heart"></i>
-                    <span>Dedication</span>
+                    <span data-i18n="skill_dedication">Dedication</span>
                 </div>
                 <div class="skill-cuadro">
                     <i class="fa-solid fa-chart-line"></i>
-                    <span>Proyect Management</span>
+                    <span data-i18n="skill_management">Project Management</span>
                 </div>
                 <div class="skill-cuadro">
                     <i class="fa-solid fa-handshake"></i>
-                    <span>leadership</span>
+                    <span data-i18n="skill_leadership">Leadership</span>
                 </div>
             </div>
         </div>
@@ -252,8 +247,8 @@
     <!-- SECCION CONTACTO -->
 <section id="contacto" class="contacto">
     <div class="contenido-seccion">
-        <h2>CONTACT</h2>
-        <p>Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below.</p>
+        <h2 data-i18n="contact_title">CONTACT</h2>
+        <p data-i18n="contact_paragraph">Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below.</p>
         <!--
         <div class="fila"> 
             <div class="col">
