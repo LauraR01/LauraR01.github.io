@@ -151,10 +151,35 @@ const translations = {
     }
 }
 
+//Funcion para cambiar de idioma
 function setLanguage(language) {
     const elements = document.querySelectorAll('[data-i18n]')
     elements.forEach(element => {
         const translationKey = element.getAttribute('data-i18n')
         element.innerText = translations[language][translationKey]
     })
+}
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    const slideWidth = slides[0].clientWidth;
+    track.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
 }
