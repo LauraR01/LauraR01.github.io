@@ -1,28 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
-*{
+
+/* CONFIGURACION GLOBAL */
+* {
     box-sizing: border-box;
     font-family: 'Work Sans';
     margin: 0;
     padding: 0;
 }
-html{
-    /* me permite deslizar cuando hago clic en los links del menu */
+
+html {
     scroll-behavior: smooth;
 }
+
 html, body {
-    /* Evitar que haya un desbordamiento horizontal */
     overflow-x: hidden;
+    background-color: #1e2326; /* Color base oscuro */
+    color: #fff; /* Color de texto base */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 /* MENU */
-.contenedor-header{
-    background: #1e2326;
+.contenedor-header {
+    background: inherit; /* Hereda el color de fondo del body */
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 99;
 }
-.contenedor-header header{
+
+.contenedor-header header {
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -30,45 +37,51 @@ html, body {
     align-items: center;
     padding: 15px 20px;
 }
-.contenedor-header header .logo a{
+
+.contenedor-header header .logo a {
     font-family: 'Righteous';
     font-size: 36px;
     color: #C439D1;
     text-decoration: none;
 }
-.contenedor-header header ul{
+
+.contenedor-header header ul {
     display: flex;
     list-style: none;
 }
-.contenedor-header header nav ul li a{
-    text-align: none;
-    color: #fff;
+
+.contenedor-header header nav ul li a {
+    text-decoration: none; /* Corregido */
+    color: inherit;
     margin: 0 15px;
     padding: 3px;
-    transition: .5s;
-    text-decoration: none;
+    transition: color 0.3s ease;
 }
-.contenedor-header header nav ul li a:hover{
+
+.contenedor-header header nav ul li a:hover {
     color: #C439D1;
 }
-.nav-responsive{
+
+.nav-responsive {
     background-color: #C439D1;
-    color: #fff;
+    color: inherit;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
 }
+
+/* BOTONES DE IDIOMA */
 .language-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 20px; /* Ajusta el espacio con el menú */
+    margin-left: 20px;
 }
 
 .language-buttons .lang-btn {
     background-color: transparent;
     border: 2px solid #C439D1;
-    color: #fff;
+    color: inherit;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -78,31 +91,47 @@ html, body {
 
 .language-buttons .lang-btn:hover {
     background-color: #C439D1;
-    color: #fff;
+    color: #fff; /* Aquí debe cambiar a blanco al pasar el mouse */
 }
 
+/* BOTON DE TEMA */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    color: inherit;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: #C439D1;
+}
 
 /* SECCION I N I C I O */
-.inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(images/backgroundDef.webp);
+/* Gradiente oscuro por defecto */
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,0.8), rgba(30,35,38,1)),
+    url(images/BackGroundFinal.jpg);
     background-size: cover;
-    background-position: center;  /* Centra la imagen horizontal y verticalmente */
-    background-repeat: no-repeat;  /* Asegura que la imagen no se repita */
+    background-position: center;
+    background-repeat: no-repeat;
     height: 130vh;
-    color: #fff;
+    color: inherit;
     display: flex;
     align-items: center;
+    transition: background 0.5s ease; /* Suaviza el cambio de fondo */
 }
-.inicio .contenido-banner{
+
+.inicio .contenido-banner {
     padding: 20px;
-    background-color: #1e2326;
+    background-color: inherit;
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
 }
-.inicio .contenido-banner img{
+
+.inicio .contenido-banner img {
     margin-top: 40px;
     border: 10px solid #C439D1;
     display: block;
@@ -110,40 +139,47 @@ html, body {
     margin: auto;
     border-radius: 100%;
 }
-.inicio .contenido-banner h1{
+
+.inicio .contenido-banner h1 {
     margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
 }
-.inicio .contenido-banner h2{
+
+.inicio .contenido-banner h2 {
     font-size: 15px;
     font-weight: normal;
 }
+
 .inicio .contenido-banner .redes {
-    display: flex; /* Aplicar flexbox al contenedor */
-    justify-content: center; /* Centrar horizontalmente los iconos */
-    gap: 10px; /* Espaciado entre los iconos */
-    margin-top: 20px; /* Añadir espacio entre el texto de arriba y los iconos */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
-.inicio .contenido-banner .redes a{
-    color: #fff;
-    display: flex;  /* Usar flexbox para los enlaces */
-    justify-content: center;  /* Centrar los iconos horizontalmente */
-    align-items: center;  /* Centrar los iconos verticalmente */
+
+.inicio .contenido-banner .redes a {
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid currentColor; /* Cambiado para que siempre coincida con el color de texto */
     border-radius: 100%;
     width: 50px;
     height: 50px;
     font-size: 24px;
     transition: .3s;
 }
-.inicio .contenido-banner .redes a:hover{
+
+.inicio .contenido-banner .redes a:hover {
     background-color: #C439D1;
+    color: #fff; /* Para que el icono siempre se vea blanco al hacer hover */
 }
+
 .sobremi{
     background-color: #1e2326;
-    color: #fff;
+    color: inherit;
     padding: 50px 20px;
 }
 .sobremi .contenido-seccion{
@@ -200,9 +236,8 @@ html, body {
     display: flex;
     flex-wrap: wrap;
 }
-.sobremi .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
+/* Cuadros de intereses */
+.sobremi .fila .col .contenedor-intereses .interes {
     background-color: #252A2E;
     border-radius: 10px;
     margin: 0 15px 15px 0;
@@ -210,17 +245,30 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    transition: 0.3s;
+    width: 100px;
+    height: 100px;
+    color: inherit; /* Para que el color cambie con el tema */
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover {
     background-color: #C439D1;
+    color: #fff; /* Ícono y texto blancos al pasar el mouse */
 }
-.sobremi .fila .col .contenedor-intereses .interes:hover i{
-    color: #fff;
-}
-.sobremi .fila .col .contenedor-intereses .interes i{
+
+.sobremi .fila .col .contenedor-intereses .interes i {
     font-size: 30px;
     margin-bottom: 10px;
+    transition: color 0.3s;
+    color: inherit; /* Ahora el color cambia con el tema */
 }
+
+.sobremi .fila .col .contenedor-intereses .interes span {
+    font-size: 14px;
+    text-align: center;
+    color: inherit; /* El texto también cambia con el tema */
+}
+
 .sobremi.fila.col.contenedor-intereses.interes span{
     font-size: 14px;
     text-align: center;
@@ -234,7 +282,7 @@ html, body {
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: inherit;
     position: relative;
     z-index: 10;
 }
@@ -279,8 +327,8 @@ html, body {
     min-width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center; /* Centrar la card */
-    padding: 20px 0; /* Separación arriba y abajo */
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .carousel-btn {
@@ -288,13 +336,14 @@ html, body {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
+    color: inherit;
+    border: 1px solid currentColor; /* El borde siempre coincide con el color activo */
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
     border-radius: 50%;
     z-index: 1;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .carousel-btn.prev {
@@ -307,53 +356,66 @@ html, body {
 
 .carousel-btn:hover {
     background-color: #C439D1;
+    color: #fff;
+    border-color: #C439D1;
 }
 
-/* Card actualizada dentro del carrusel */
+/* Card dentro del carrusel */
 .card {
     background-color: #1a1a1a;
-    border: 1px solid #333;
+    border: 1px solid currentColor; /* El borde cambia con el tema */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 80%; /* Reducimos tamaño dentro del slide */
-    max-width: 500px; /* Limite máximo para pantallas grandes */
+    width: 80%;
+    max-width: 500px;
     padding: 20px;
     text-align: center;
-    color: #fff;
+    color: inherit;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .card img {
     width: 100%;
-    max-height: 250px; /* Limitar altura de la imagen */
-    object-fit: cover; /* Recorta sin deformar */
+    max-height: 250px;
+    object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
 
 .cards-section {
-    background-color: #1e2326; /* Fondo oscuro */
+    background-color: inherit;
     padding: 50px 20px;
     text-align: center;
-    color: #fff;
+    color: inherit;
 }
 
 .cards-section h2 {
-    font-size: 36px;
+    font-size: 42px;
     font-family: 'Righteous', sans-serif;
     margin-bottom: 30px;
-    color: #fff; /* Texto blanco */
-    text-align: center; /* Esto centra el título */
+    color: inherit;
+    text-align: center;
+}
+
+.cards-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #C439D1;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
 }
 
 .card h3 {
     font-size: 24px;
     margin: 15px 0 10px 0;
-    color: #fff;
+    color: inherit;
 }
 
 .card p {
     font-size: 16px;
-    color: #ddd;
+    color: inherit; /* Cambiado de #ddd a inherit */
     margin-bottom: 10px;
 }
 
@@ -368,7 +430,7 @@ html, body {
 .tag {
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
+    color: inherit;
     padding: 5px 10px;
     border-radius: 20px;
     text-align: center;
@@ -391,10 +453,10 @@ html, body {
 
 /* SECCION SKILLS */
 .skills {
-    background-color: #1e2326;
-    color: #fff;
+    background-color: inherit;
+    color: inherit;
     padding: 50px 20px;
-    text-align: center; /* Centra los textos */
+    text-align: center;
 }
 
 .skills .contenido-seccion {
@@ -403,9 +465,21 @@ html, body {
 }
 
 .skills h2 {
-    font-size: 48px;
+    font-size: 42px;
     font-family: 'Righteous', sans-serif;
-    padding: 20px 0;
+    margin-bottom: 30px;
+    color: inherit;
+    text-align: center;
+}
+
+.skills h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #C439D1;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
 }
 
 .icono-bajo-titulo {
@@ -415,32 +489,28 @@ html, body {
     margin: 10px auto;
 }
 
-
-
-/* Contenedor para dividir en columnas */
 .contenedor-skills-columnas {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permitir que las columnas se ajusten en pantallas pequeñas */
+    flex-wrap: wrap;
     gap: 20px;
-    
-    
 }
 
 .columna-skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste dinámico de columnas */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    width: 45%; /* Ancho predeterminado de las columnas */
+    flex: 1; /* Mejor que usar width fija */
+    min-width: 300px; /* Evita que se achique demasiado */
     margin: auto;
-    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    text-align: left;
 }
 
 .columna-skills h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    grid-column: span 3; /* Título ocupa todo el ancho */
-    text-align: center; /* Títulos centrados */
+    grid-column: span 3;
+    text-align: center;
 }
 
 /* Cuadros de habilidades */
@@ -452,60 +522,55 @@ html, body {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     height: 120px;
     width: 100%;
+    color: inherit;
 }
 
 .skill-cuadro:hover {
     background-color: #C439D1;
+    color: #fff;
 }
 
 .skill-cuadro i {
     font-size: 30px;
     margin-bottom: 10px;
-    color: #fff;
+    color: inherit;
 }
 
 .skill-cuadro span {
     font-weight: bold;
     font-size: 14px;
-    color: #fff;
+    color: inherit;
 }
 
 /* Ajustes responsivos */
 @media screen and (max-width: 700px) {
     .contenedor-skills-columnas {
-        flex-direction: column; /* Apila las columnas verticalmente */
-        align-items: center; /* Centra las columnas */
+        flex-direction: column;
+        align-items: center;
     }
 
     .columna-skills {
-        width: 100%; /* Cada columna ocupa el ancho completo */
-        margin-bottom: 20px; /* Espaciado entre columnas */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .skill-cuadro {
-        flex-direction: row; /* Mantiene los íconos alineados horizontalmente con el texto */
+        flex-direction: row;
         justify-content: flex-start;
-        height: auto; /* Ajusta la altura automáticamente */
-        padding: 10px 15px; /* Ajusta el relleno */
+        height: auto;
+        padding: 10px 15px;
     }
 
     .skill-cuadro i {
-        margin-right: 10px; /* Espaciado entre el ícono y el texto */
+        margin-right: 10px;
     }
 
     .skill-cuadro span {
-        font-size: 16px; /* Ajusta el tamaño del texto para mayor legibilidad */
+        font-size: 16px;
     }
-}
-
-/* Asegurar que la sección skills no cause desbordamiento */
-#skills {
-    max-width: 100%;
-    overflow: hidden;
-    padding: 20px;
 }
 
 /* Hacer los bloques de habilidades más pequeños en móviles */
@@ -521,7 +586,7 @@ html, body {
         font-size: 14px;  /* Reduce el tamaño del texto */
     }
 
-    #skills h2, #skills p {
+    #skills p {
         font-size: 9px; /* Ajusta los títulos y párrafos dentro de skills */
         text-align: center; /* Centra el texto para mejor legibilidad */
     }
@@ -529,64 +594,75 @@ html, body {
 
 
 /* SECCION CONTACTO */
-.contacto{
+.contacto {
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color: inherit; /* Para que cambie con el tema */
+    color: inherit;
     padding: 50px 0;
 }
-.contacto .contenido-seccion{
+
+.contacto .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.contacto h2{
+
+.contacto h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    color: inherit;
 }
+
 .contacto .fila {
     display: flex;
-    justify-content: center; /* Centrar el contenido horizontalmente */
-    align-items: center; /* Alinear verticalmente si es necesario */
-    flex-wrap: wrap; /* Para que los elementos no se desborden en pantallas pequeñas */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 .contacto .col {
-    width: 100%; /* Ajustamos al 100% para asegurarnos de que se centra */
-    max-width: 640px; /* Añadimos un máximo ancho para el iframe */
+    width: 100%;
+    max-width: 640px;
     padding: 20px;
     text-align: center;
 }
+
 .contacto .col iframe {
-    width: 100%; /* El iframe ocupará el 100% del contenedor */
-    height: 800px; /* Ajustamos la altura según tus necesidades */
-    margin: 0 auto; /* Centramos el iframe */
+    width: 100%;
+    height: 500px; /* Ajustado para pantallas medias */
+    margin: 0 auto;
     border: none;
 }
-.contacto .col input, .contacto .col textarea{
+
+.contacto .col input,
+.contacto .col textarea {
     display: block;
     width: 100%;
     padding: 18px;
     border: none;
     margin-bottom: 20px;
     background-color: #252A2E;
-    color: #fff;
+    color: inherit;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
-.contacto button{
+
+.contacto button {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid currentColor; /* Cambia con el tema */
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: inherit;
     position: relative;
     z-index: 10;
 }
-.contacto button .overlay{
+
+.contacto button .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -596,33 +672,43 @@ html, body {
     z-index: -1;
     transition: 1s;
 }
-.contacto button:hover .overlay{
+
+.contacto button:hover {
+    border-color: #C439D1;
+}
+
+.contacto button:hover .overlay {
     width: 100%;
 }
-.contacto .col img{
+
+.contacto .col img {
     width: 100%;
 }
-footer{
+
+footer {
     background-color: #252A2E;
-    color: #fff;
+    color: inherit;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
-footer .redes{
-    display: flex; /* Aplicar flexbox al contenedor */
-    justify-content: center; /* Centrar horizontalmente los iconos */
-    gap: 10px; /* Espaciado entre los iconos */
-    margin-top: 20px; /* Añadir espacio entre el texto de arriba y los iconos */
-}
-footer .redes a{
-    color: #fff;
+
+footer .redes {
     display: flex;
-    justify-content: center;  /* Centrar los iconos horizontalmente */
-    align-items: center;  /* Centrar los iconos verticalmente */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+footer .redes a {
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid currentColor;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -631,15 +717,17 @@ footer .redes a{
     font-size: 20px;
     transition: .3s;
 }
-footer .redes a:hover{
+
+footer .redes a:hover {
     background-color: #C439D1;
 }
-footer .arriba{
+
+footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
     background-color: #C439D1;
-    color: #fff;
+    color: inherit;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -648,61 +736,185 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+
+/* Responsivo Contacto */
+@media (max-width: 768px) {
+    .contacto .col iframe {
+        height: 300px; /* Más pequeño en móviles */
+    }
+}
+
 /* SECCION RESPONSIVE */
-@media screen and (max-width:980px){
-    nav{
+@media screen and (max-width: 980px) {
+    nav {
         display: none;
     }
-    .nav-responsive{
+
+    .nav-responsive {
         display: block;
     }
-    nav.responsive{
+
+    nav.responsive {
         display: block;
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color: inherit; /* Cambia con el tema */
         width: 180px;
     }
-    nav.responsive ul{
+
+    nav.responsive ul {
         display: block !important;
     }
-    nav.responsive ul li{
-        border-bottom: 1px solid #fff;
+
+    nav.responsive ul li {
+        border-bottom: 1px solid currentColor; /* Cambia con el tema */
         padding: 10px 0;
     }
 }
-@media screen and (max-width:700px){
-    .sobremi .fila{
+
+@media screen and (max-width: 700px) {
+    .sobremi .fila {
         display: block;
-    }
-    .sobremi .fila .col{
-        width: fit-content;
     }
 
-    .skills .fila{
-        display: block;
-    }
-    .skills .fila .col{
-        width: 100%;
-    }
-    .skills .fila .col .barra-skill{
+    .sobremi .fila .col {
         width: 100%;
     }
 
-    .curriculum .fila{
+    .skills .fila {
         display: block;
     }
-    .curriculum .fila .col{
+
+    .skills .fila .col {
+        width: 100%;
+    }
+
+    .skills .fila .col .barra-skill {
+        width: 100%;
+    }
+
+    .curriculum .fila {
+        display: block;
+    }
+
+    .curriculum .fila .col {
         width: 90%;
     }
-    .curriculum .fila .derecha{
+
+    .curriculum .fila .derecha {
         margin-left: 20px;
     }
-    .contacto .fila{
+
+    .contacto .fila {
         display: block;
     }
-    .contacto .fila .col{
-        width: fit-content;
+
+    .contacto .fila .col {
+        width: 100%;
     }
+}
+
+/* Light Mode General */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Fondo y texto de las secciones */
+body.light-mode .contenedor-header,
+body.light-mode .cards-section,
+body.light-mode .sobremi,
+body.light-mode .skills,
+body.light-mode .contacto,
+body.light-mode footer {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Gradiente claro para la sección inicio */
+body.light-mode .inicio {
+    background: linear-gradient(to top, rgba(211, 211, 211, 0.5), rgba(211, 211, 211, 0.8)),
+    url(images/BackGroundFinal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Menú responsive */
+body.light-mode nav.responsive {
+    background-color: #ddd;
+}
+
+body.light-mode nav.responsive ul li {
+    border-bottom: 1px solid #333;
+}
+
+/* Botones de idioma */
+body.light-mode .language-buttons .lang-btn {
+    border-color: #C439D1;
+}
+
+body.light-mode .language-buttons .lang-btn:hover {
+    background-color: #C439D1;
+    color: #fff;
+}
+
+/* Botón cambio de tema */
+body.light-mode .theme-toggle {
+    color: #333;
+}
+
+body.light-mode .theme-toggle:hover {
+    color: #C439D1;
+}
+
+/* Cards */
+body.light-mode .card {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .card p {
+    color: #555;
+}
+
+/* Contacto */
+body.light-mode .contacto .col input,
+body.light-mode .contacto .col textarea {
+    background-color: #ddd;
+    color: #333;
+    border: 1px solid #bbb;
+}
+
+/* Footer */
+body.light-mode footer {
+    background-color: #ddd;
+}
+
+body.light-mode footer .redes a {
+    border-color: currentColor;
+}
+
+/* Skills */
+body.light-mode .skill-cuadro {
+    background-color: #ddd;
+    color: #333;
+}
+
+body.light-mode .skill-cuadro:hover {
+    background-color: #C439D1;
+    color: #fff;
+}
+
+/* Intereses */
+body.light-mode .sobremi .fila .col .contenedor-intereses .interes {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .sobremi .fila .col .contenedor-intereses .interes:hover {
+    background-color: #C439D1;
+    color: #fff;
 }

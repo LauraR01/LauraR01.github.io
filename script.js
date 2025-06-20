@@ -160,6 +160,7 @@ function setLanguage(language) {
     })
 }
 
+//Funcion para el carrusel
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -182,4 +183,17 @@ function nextSlide() {
 
 function prevSlide() {
     showSlide(currentSlide - 1);
+}
+
+//Funcion para cambio oscuro/claro
+function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    const icon = document.getElementById('theme-icon');
+    if (document.body.classList.contains('light-mode')) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    } else {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    }
 }
