@@ -92,7 +92,8 @@ const translations = {
         skill_leadership: 'Leadership',
 
         contact_title: 'CONTACT',
-        contact_paragraph: "Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below."
+        contact_paragraph: "Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below.",
+        contact_button: 'Send mail'
         // Sigue agregando todas las claves con sus textos en inglés...
     },
     es: {
@@ -146,7 +147,8 @@ const translations = {
         skill_leadership: 'Liderazgo',
 
         contact_title: 'CONTACTO',
-        contact_paragraph: "No dudes en enviarme un mensaje aquí: lr11ramos@gmail.com, ¡intentaré responderte lo antes posible! También estoy en las redes sociales que figuran a continuación."
+        contact_paragraph: "No dudes en enviarme un mensaje aquí: lr11ramos@gmail.com, ¡intentaré responderte lo antes posible! También estoy en las redes sociales que figuran a continuación.",
+        contact_button: 'Enviar correo'
         // Sigue agregando todas las claves con sus textos en español...
     }
 }

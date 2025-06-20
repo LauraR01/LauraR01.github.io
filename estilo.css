@@ -397,16 +397,6 @@ html, body {
     text-align: center;
 }
 
-.cards-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #C439D1;
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
-
 .card h3 {
     font-size: 24px;
     margin: 15px 0 10px 0;
@@ -470,16 +460,6 @@ html, body {
     margin-bottom: 30px;
     color: inherit;
     text-align: center;
-}
-
-.skills h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #C439D1;
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
 }
 
 .icono-bajo-titulo {
@@ -1015,4 +995,18 @@ body {
     .contacto form textarea {
         width: 300px;
     }
+}
+
+/* Para que todos los títulos tengan la rayita */
+.sobremi h2::after,
+.skills h2::after,
+.cards-section h2::after,
+.contacto h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #C439D1;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
 }
