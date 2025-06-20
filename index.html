@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.iconify.design/1/1.0.0/iconify.min.js"></script>
-    <title>Portfolio</title>
+    <title data-i18n="portfolio_title">Portfolio</title>
     <link rel="stylesheet" href="estilo.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- MENU ENCABEZADO -->
@@ -60,14 +62,14 @@
     <!-- SECCIÓN DE CARDS -->
     <section id="cards-section" class="cards-section">
         <div class="contenido-seccion">
-            <h2 data-i18n="portfolio_title">Portfolio</h2>
+            <h2 data-aos="fade-up" data-i18n="portfolio_title">Portfolio</h2>
 
             <div class="carousel">
                 <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
 
                 <div class="carousel-track">
                     <!-- Slide 1 -->
-                    <div class="carousel-slide">
+                    <div class="carousel-slide" data-aos="zoom-in">
                         <a href="https://lauraramosachicanoy.itch.io/radioactive-trail" target="_blank" class="card">
                             <img src="images/Portada.png" alt="Feature 1">
                             <h3>Radioactive trail</h3>
@@ -84,7 +86,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="carousel-slide">
+                    <div class="carousel-slide" data-aos="zoom-in">
                         <a href="https://lauraramosachicanoy.itch.io/echoquest" target="_blank" class="card">
                             <img src="images/proyecto4.png" alt="Feature 2">
                             <h3>Echoquest: Galactic frontier</h3>
@@ -101,7 +103,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="carousel-slide">
+                    <div class="carousel-slide" data-aos="zoom-in">
                         <a href="https://revistas.ucc.edu.co/index.php/in/article/view/4934/3750" target="_blank" class="card">
                             <img src="images/proyecto5.png" alt="Feature 3">
                             <h3 data-i18n="project3_title">Pedagogical support tools</h3>
@@ -129,7 +131,7 @@
     <!-- SECCION SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-            <h2 data-i18n="aboutme_title">About me</h2>
+            <h2 data-aos="fade-up" data-i18n="aboutme_title">About me</h2>
             <p><span data-i18n="aboutme_intro">Hi, I'm Laura Ramos Achicanoy.</span> <span data-i18n="aboutme_paragraph1">I'm an Electronic Engineer specializing in video game development, and I’ve been creating immersive experiences for the entertainment industry for several years...</span></p>
 
             <p data-i18n="aboutme_paragraph2">Throughout my journey, I've had the pleasure of working on both collaborative and solo projects, honing skills like teamwork, adaptability, creativity, time management, communication, and leadership...</p>
@@ -154,37 +156,37 @@
                 <div class="col">
                     <h3 data-i18n="aboutme_interests">Interests</h3>
                     <div class="contenedor-intereses">
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <i class="fa-solid fa-gamepad"></i>
                             <span data-i18n="interest_games">GAMES</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <i class="fa-solid fa-headphones"></i>
                             <span data-i18n="interest_music">MUSIC</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <i class="fa-solid fa-plane"></i>
                             <span data-i18n="interest_travel">TRAVEL</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <span class="iconify" data-icon="streamline:vr-headset-1" data-inline="false" style="width: 45px; height: 45px;"></span>
                             <span class="streamline--vr-headset-1"></span>
                             <span data-i18n="interest_vr">VR</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <span class="iconify" data-icon="mynaui:ar" data-inline="false" style="width: 45px; height: 45px;"></span>
                             <span data-i18n="interest_ar">AR</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <span class="iconify" data-icon="bx:swim" data-inline="false" style="width: 45px; height: 45px;"></span>
                             <span class="bx--swim"></span>
                             <span data-i18n="interest_sport">SPORT</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <i class="fa-solid fa-book"></i>
                             <span data-i18n="interest_books">BOOKS</span>
                         </div>
-                        <div class="interes">
+                        <div class="interes" data-aos="flip-left">
                             <i class="fa-solid fa-pencil"></i>
                             <span data-i18n="interest_write">WRITE AND READ</span>
                         </div>
@@ -201,33 +203,33 @@
 <!-- SECCION SKILLS -->
 <section class="skills" id="skills">
     <div class="contenido-seccion">
-        <h2 id="skills-title" data-i18n="skills_title">SKILLS</h2>
+        <h2 data-aos="fade-up" id="skills-title" data-i18n="skills_title">SKILLS</h2>
         <i class="fa-solid fa-angles-down icono-bajo-titulo"></i>
         <!-- Technical Skills -->
         <div class="contenedor-skills-columnas">
             <div class="columna-skills">
                 <h3 data-i18n="technical_skills">Technical Skills</h3>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-brands fa-unity"></i>
                     <span>Unity</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <span class="iconify" data-icon="hugeicons:computer-programming-02" style="width: 40px; height: 40px;"></span>
                     <span>C#</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-brands fa-python"></i>
                     <span>Python</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <span class="iconify" data-icon="simple-icons:blender" style="width: 40px; height: 40px;"></span>
                     <span>Blender</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <span class="iconify" data-icon="simple-icons:autocad" style="width: 40px; height: 40px;"></span>
                     <span>Autocad</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-solid fa-file-code"></i>
                     <span>HTML & CSS</span>
                 </div>
@@ -235,27 +237,27 @@
             <!-- Professional Skills -->
             <div class="columna-skills">
                 <h3 data-i18n="professional_skills">Professional Skills</h3>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-solid fa-comments"></i>
                     <span data-i18n="skill_communication">Communication</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-solid fa-users"></i>
                     <span data-i18n="skill_teamwork">Team work</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <span class="iconify" data-icon="mage:light-bulb" style="width: 40px; height: 40px;"></span>
                     <span data-i18n="skill_creativity">Creativity</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-solid fa-heart"></i>
                     <span data-i18n="skill_dedication">Dedication</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-solid fa-chart-line"></i>
                     <span data-i18n="skill_management">Project Management</span>
                 </div>
-                <div class="skill-cuadro">
+                <div class="skill-cuadro" data-aos="flip-left">
                     <i class="fa-solid fa-handshake"></i>
                     <span data-i18n="skill_leadership">Leadership</span>
                 </div>
@@ -264,18 +266,14 @@
     </div>
 </section>
 
-    <!-- SECCION CONTACTO -->
+<!-- SECCION CONTACTO -->
 <section id="contacto" class="contacto">
     <div class="contenido-seccion">
-        <h2 data-i18n="contact_title">CONTACT</h2>
-        <p data-i18n="contact_paragraph">Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below.</p>
-        <!--
-        <div class="fila"> 
-            <div class="col">
-                <iframe src="https://forms.gle/AxeWMxPPZ5Abfi2y8" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-            </div>
-        </div>
-        Formulario de Google -->
+        <h2 data-aos="fade-up" data-i18n="contact_title">CONTACT</h2>
+        <p data-aos="fade-right" data-i18n="contact_paragraph">
+            Feel free to send me a message here: lr11ramos@gmail.com, I'll try to respond as quick as I can! I'm also on the social networks listed below.
+        </p>
+        <a href="mailto:lr11ramos@gmail.com" class="btn-contacto">Enviar correo</a>
     </div>
 </section>
 
@@ -293,5 +291,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

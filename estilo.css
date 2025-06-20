@@ -685,6 +685,25 @@ html, body {
     width: 100%;
 }
 
+.btn-contacto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C439D1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0 auto; /* Centra horizontalmente */
+}
+
+.contacto .contenido-seccion {
+    text-align: center; /* Centra el contenido dentro de la sección */
+}
+
+.btn-contacto:hover {
+    background-color: #a52aa3;
+}
+
 footer {
     background-color: #252A2E;
     color: inherit;
@@ -917,4 +936,83 @@ body.light-mode .sobremi .fila .col .contenedor-intereses .interes {
 body.light-mode .sobremi .fila .col .contenedor-intereses .interes:hover {
     background-color: #C439D1;
     color: #fff;
+}
+
+/* Base Mobile First */
+
+/* General */
+body {
+    padding: 10px;
+}
+
+/* Carrusel */
+.card {
+    width: 100%; /* Ocupa todo el ancho en mobile */
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Sección Sobre mí */
+.sobremi .fila {
+    display: block; /* Coloca las columnas una debajo de otra */
+}
+
+.sobremi .fila .col {
+    width: 100%; /* Ocupar el ancho completo */
+    margin-bottom: 20px; /* Espaciado entre columnas */
+}
+
+/* Skills */
+.skills .contenedor-skills-columnas {
+    flex-direction: column;
+    align-items: center;
+}
+
+.columna-skills {
+    width: 100%;
+}
+
+/* Contacto */
+.contacto form input,
+.contacto form textarea,
+.contacto form button {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Botones de idiomas y tema */
+.language-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.language-buttons .lang-btn {
+    width: 100px;
+    margin: 5px;
+}
+
+/* Header - menú responsive */
+@media screen and (min-width: 980px) {
+    .sobremi .fila {
+        display: flex;
+    }
+
+    .sobremi .fila .col {
+        width: 50%;
+    }
+
+    .skills .contenedor-skills-columnas {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .columna-skills {
+        width: 45%;
+    }
+
+    .contacto form input,
+    .contacto form textarea {
+        width: 300px;
+    }
 }
